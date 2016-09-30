@@ -1,4 +1,7 @@
-# Research Log
+# BarriersSocioSpatial
+## Research Log
+
+Please keep this file updated as you work on the project. Any links / context / insight you can give that helps explain the decisions you are making will be very helpful!
 
 ### 29 Sep 2016 - CHRIS
 Repository created with .gitignore, README.md, and researchLog.md files added.

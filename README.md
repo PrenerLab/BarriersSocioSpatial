@@ -1,4 +1,4 @@
-# BarriersCensus
+# BarriersSocioSpatial
 
 ### Repository Contents
 This repository contains files for:
