@@ -2,8 +2,9 @@
 
 ### Repository Contents
 This repository contains files for:
-  - /OriginalLTDB
+  - /OriginalLTDB - Brown University Historical Census Datasets
   - README.md
+  - researchLog.md
   - .gitignore
 
 ### Repository Purpose
