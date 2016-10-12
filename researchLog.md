@@ -18,3 +18,6 @@ Added all historical census data from the [Brown LTDB project](http://www.s4.bro
 
 ### 07 Oct 2016 - CHRIS
 The branch referenced above was removed last night based on a Slack conversation with Chris, Taylor, and Jes. Going to approach this process from the ground up a second time based on that conversation.
+
+### 11 Oct 2016 - Jes
+The correct original data files with the data matched to 2010 Census geography boundaries were added to the master repository. The sample count data files were added as well. These files are referenced/described above. The README.md file was also updated to accurately reflect the licensing agreements for the datasets.
