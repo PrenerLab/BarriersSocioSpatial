@@ -2,7 +2,7 @@
 
 ### Repository Contents
 This repository contains files for:
-  - `/OriginalLTDB` - Brown University Historical Census Datasets
+  - `/BrownLTDB` - Brown University Historical Census Datasets
   - `README.md`
   - `researchLog.md`
   - `.gitignore`
@@ -15,3 +15,6 @@ This repository contains files for:
 
 ### Slack Info
 Discussion related to this repository happens in the #barriers-sociospatial channel.
+
+### Trello Info
+To-dos related to this repository can be found on the Barriers Sociospatial board on Trello.
