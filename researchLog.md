@@ -20,4 +20,13 @@ Added all historical census data from the [Brown LTDB project](http://www.s4.bro
 The branch referenced above was removed last night based on a Slack conversation with Chris, Taylor, and Jes. Going to approach this process from the ground up a second time based on that conversation.
 
 ### 11 Oct 2016 - Jes
-The correct original data files with the data matched to 2010 Census geography boundaries were added to the master repository. The sample count data files were added as well. These files are referenced/described above. The README.md file was also updated to accurately reflect the licensing agreements for the datasets.
+The correct original data files with the data matched to 2010 Census geography boundaries were added to the master repository. The sample count data files were added as well. These files are referenced/described above. The `README.md` file was also updated to accurately reflect the licensing agreements for the datasets.
+
+After these were added, they were imported into Stata and saved as Stata `.dta` files. These were saved in `Working/fileConversion` in the repo. Pull request was opened to incorporate these into the `master` branch.
+
+### 21 Oct 2016 - CHRIS 
+
+Accepted Jes's pull request and merged the data into the `master` branch. Moved data into the `Posted/01-fileConversion` directory.
+
+
+
