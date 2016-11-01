@@ -82,6 +82,7 @@ superordinates  -
 - ltdb_std_1980_sample.csv
 - ltdb_std_1990_sample.csv
 - ltdb_std_2000_sample.csv
+- ltdb_std_2010_sample.csv
 */
 
 /*
@@ -95,6 +96,7 @@ subordinates -
 - sample1980.dta
 - sample1990.dta
 - sample2000.dta
+- sample2010.dta
 */
 
 
@@ -116,8 +118,8 @@ foreach dataFile in `files' {
 }
 
 local dataPath "/Users/`c(username)'/Github Desktop/BarriersSocioSpatial/BrownLTDB/LTDB_Std_All_Sample"
-local files "ltdb_std_1970_sample.csv ltdb_std_1980_sample.csv ltdb_std_1990_sample.csv ltdb_std_2000_sample.csv"
-local newNames "sample1970.dta sample1980.dta sample1990.dta sample2000.dta"
+local files "ltdb_std_1970_sample.csv ltdb_std_1980_sample.csv ltdb_std_1990_sample.csv ltdb_std_2000_sample.csv ltdb_std_2010_sample.csv"
+local newNames "sample1970.dta sample1980.dta sample1990.dta sample2000.dta sample2010.dta"
 local i=1
 foreach dataFile in `files' {
   local newData: word `i' of `newNames'
