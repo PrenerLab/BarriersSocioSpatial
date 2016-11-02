@@ -1,0 +1,164 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/NStevens/Documents/Working/preMergeFileCleaning/preMergeFile
+> Cleaning.txt
+  log type:  text
+ opened on:   1 Nov 2016, 18:45:32
+
+. 
+. // ==========================================================================
+. 
+. /*
+> file name - master.do
+> 
+> project name - Barriers SocioSpatial
+> 
+> purpose - This do-file runs the data cleaning commands for the Barriers SocioS
+> patial project.
+> 
+> created - November 1, 2016
+> 
+> updated - November 1, 2016
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do-file runs two loops. The first loop renames a variable to match all
+> datasets and drops all observations outside of St. Louis sity. The second loop
+> drops all of the observations ouside of St. Louis City for the datasets that
+> already contain the correct variables.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - fullcount1970.dta
+> - fullcount1980.dta
+> - fullcount1990.dta
+> - fullcount2000.dta
+> - fullcount2010.dta
+> - sample1970.dta
+> - sample1980.dta
+> - sample1990.dta
+> - sample2000.dta
+> - sample2010.dta
+> */
+. 
+. /*
+> subordinates -
+> - fullcount1970.dta
+> - fullcount1980.dta
+> - fullcount1990.dta
+> - fullcount2000.dta
+> - fullcount2010.dta
+> - sample1970.dta
+> - sample1980.dta
+> - sample1990.dta
+> - sample2000.dta
+> - sample2010.dta
+> */
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. local dataPath "/Users/`c(username)'/Github Desktop/BarriersSocioSpatial/Poste
+> d/01-fileConversion"
+
+. local fileNames "fullcount1970.dta fullcount1980.dta fullcount1990.dta fullcou
+> nt2000.dta sample1970.dta sample1980.dta sample1990.dta sample2000.dta"
+
+. local tenNames "fullcount2010.dta sample2010.dta"
+
+. local i = 1
+
+. 
+. foreach fileName in `fileNames' {
+  2.   local newData: word `i' of `fileNames'
+  3.   use "`dataPath'/`fileName'"
+  4.   rename trtid10 tractid
+  5.   keep if county == "St. Louis city"
+  6.   save "/Users/`c(username)'/Documents/Working/$projName/`newData'", replac
+> e
+  7.   clear
+  8.   local ++i
+  9. }
+(52,653 observations deleted)
+file /Users/NStevens/Documents/Working/preMergeFileCleaning/fullcount1970.dta sa
+> ved
+(59,081 observations deleted)
+file /Users/NStevens/Documents/Working/preMergeFileCleaning/fullcount1980.dta sa
+> ved
+(72,587 observations deleted)
+file /Users/NStevens/Documents/Working/preMergeFileCleaning/fullcount1990.dta sa
+> ved
+(72,587 observations deleted)
+file /Users/NStevens/Documents/Working/preMergeFileCleaning/fullcount2000.dta sa
+> ved
+(52,653 observations deleted)
+(note: file /Users/NStevens/Documents/Working/preMergeFileCleaning/sample1970.dt
+> a not found)
+file /Users/NStevens/Documents/Working/preMergeFileCleaning/sample1970.dta saved
+(59,081 observations deleted)
+(note: file /Users/NStevens/Documents/Working/preMergeFileCleaning/sample1980.dt
+> a not found)
+file /Users/NStevens/Documents/Working/preMergeFileCleaning/sample1980.dta saved
+(72,587 observations deleted)
+(note: file /Users/NStevens/Documents/Working/preMergeFileCleaning/sample1990.dt
+> a not found)
+file /Users/NStevens/Documents/Working/preMergeFileCleaning/sample1990.dta saved
+(72,587 observations deleted)
+(note: file /Users/NStevens/Documents/Working/preMergeFileCleaning/sample2000.dt
+> a not found)
+file /Users/NStevens/Documents/Working/preMergeFileCleaning/sample2000.dta saved
+
+. 
+. foreach tenName in `tenNames' {
+  2.   local newData: word `i' of `tenNames'
+  3.   use "`dataPath'/`tenName'"
+  4.   keep if county == "St. Louis city"
+  5.   save "$projName/`tenName'", replace
+  6.   clear
+  7.   local ++i
+  8. }
+(73,896 observations deleted)
+(note: file preMergeFileCleaning/fullcount2010.dta not found)
+file preMergeFileCleaning/fullcount2010.dta saved
+(73,896 observations deleted)
+(note: file preMergeFileCleaning/sample2010.dta not found)
+file preMergeFileCleaning/sample2010.dta saved
+
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // copy code to code archive
+. 
+. copy "clean.do" "$projName/CodeArchive/clean.do", replace
+(note: file preMergeFileCleaning/CodeArchive/clean.do not found)
+
+. 
+. 
+. 
+. // ==========================================================================
+. 
+. // standard closing options
+. 
+. log close _all
+      name:  <unnamed>
+       log:  /Users/NStevens/Documents/Working/preMergeFileCleaning/preMergeFile
+> Cleaning.txt
+  log type:  text
+ closed on:   1 Nov 2016, 18:45:34
+--------------------------------------------------------------------------------
