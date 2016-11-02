@@ -116,7 +116,7 @@ foreach fileName in `fileNames' {
   use "`dataPath'/`fileName'"
   rename trtid10 tractid
   keep if county == "St. Louis city"
-  save "/Users/`c(username)'/Documents/Working/$projName/`newData'", replace
+  save "$projName/`newData'", replace
   clear
   local ++i
 }
