@@ -1,0 +1,250 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/NStevens/Documents/Working/fileMergePIC/fileMergePIC.txt
+  log type:  text
+ opened on:   2 Nov 2016, 19:40:42
+
+. 
+. // ==========================================================================
+. 
+. /*
+> file name - master.do
+> 
+> project name - Barriers SocioSpatial Merge
+> 
+> purpose - This do-file runs the merge.do file.
+> 
+> created - October 27, 2016
+> 
+> updated - November 2, 2016
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description - This do file adds a year variable to each dataset. It then 
+> merges
+> the sample.dta files with the fullcount.dta files. After the fullcount and sam
+> ple
+> data files are merged it then merges these files into one dataset.
+> 
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - fullcount1970.dta
+> - fullcount1980.dat
+> - fullcount1990.dta
+> - fullcount2000.dta
+> - fullcount2010.dta
+> - sample1970.dta
+> - sample1980.dta
+> - sample1990.dta
+> - sample2000.dta
+> - sample2010.dta
+> */
+. 
+. /*
+> subordinates -
+> - stlCity40.dta
+> */
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. cd "/Users/`c(username)'/Documents/Working"
+/Users/NStevens/Documents/Working
+
+. local dataPath "/Users/`c(username)'/Github Desktop/BarriersSocioSpatial/Worki
+> ng/fileMerge/preMergeFileCleaning"
+
+. clear
+
+. forvalues i = 1970(10)2010 {
+  2.   use "`dataPath'/fullcount`i'.dta"
+  3.   generate year = `i'
+  4.   save "fullcount`i'.dta", replace
+  5.   clear
+  6. }
+(note: file fullcount1970.dta not found)
+file fullcount1970.dta saved
+(note: file fullcount1980.dta not found)
+file fullcount1980.dta saved
+(note: file fullcount1990.dta not found)
+file fullcount1990.dta saved
+(note: file fullcount2000.dta not found)
+file fullcount2000.dta saved
+(note: file fullcount2010.dta not found)
+file fullcount2010.dta saved
+
+. 
+. forvalues i = 1970(10)2010 {
+  2.   use "`dataPath'/sample`i'.dta"
+  3.   generate year = `i'
+  4.   save "sample`i'.dta", replace
+  5.   clear
+  6. }
+(note: file sample1970.dta not found)
+file sample1970.dta saved
+(note: file sample1980.dta not found)
+file sample1980.dta saved
+(note: file sample1990.dta not found)
+file sample1990.dta saved
+(note: file sample2000.dta not found)
+file sample2000.dta saved
+(note: file sample2010.dta not found)
+file sample2010.dta saved
+
+. 
+. 
+. cd "/Users/`c(username)'/Documents/Working"
+/Users/NStevens/Documents/Working
+
+. local fullNames "fullcount1970.dta fullcount1980.dta fullcount1990.dta fullcou
+> nt2000.dta fullcount2010.dta"
+
+. local sampleNames "sample1970.dta sample1980.dta sample1990.dta sample2000.dta
+>  sample2010.dta"
+
+. local saveNames "stlCity1970 stlCity1980 stlCity1990 stlCity2000 stlCity2010"
+
+. local i = 1
+
+. local year = 1970
+
+. foreach fullName in `fullNames' {
+  2.   local mergeFile : word `i' of `sampleNames'
+  3.   local saveFile : word `i' of `saveNames'
+  4.   use   "`fullName'"
+  5.   merge 1:1 tractid using "`mergeFile'"
+  6.   assert _merge == 3
+  7.   drop _merge
+  8.   assert year == `year'
+  9.   save "$projName/Data/`saveFile'", replace
+ 10.   clear
+ 11.   local i = `i' + 1
+ 12.   local year = `year' + 10
+ 13. }
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+(note: file fileMergePIC/Data/stlCity1970.dta not found)
+file fileMergePIC/Data/stlCity1970.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+(note: file fileMergePIC/Data/stlCity1980.dta not found)
+file fileMergePIC/Data/stlCity1980.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+(note: file fileMergePIC/Data/stlCity1990.dta not found)
+file fileMergePIC/Data/stlCity1990.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+(note: file fileMergePIC/Data/stlCity2000.dta not found)
+file fileMergePIC/Data/stlCity2000.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+(note: file fileMergePIC/Data/stlCity2010.dta not found)
+file fileMergePIC/Data/stlCity2010.dta saved
+
+. 
+. local i = 1
+
+. use "$projName/Data/stlCity1970.dta"
+
+. save "$projName/Data/stlCity40.dta", replace
+(note: file fileMergePIC/Data/stlCity40.dta not found)
+file fileMergePIC/Data/stlCity40.dta saved
+
+. local fileNames "stlCity1980.dta stlCity1990.dta stlCity2000.dta stlCity2010.d
+> ta"
+
+. foreach fileName in `fileNames' {
+  2.   local mergeFile : word `i' of `fileNames'
+  3.   use "$projName/Data/stlCity40.dta"
+  4.   merge 1:1 tractid using "$projName/Data/`mergeFile'"
+  5.   assert _merge == 3
+  6.   drop _merge
+  7.   save "$projName/Data/stlCity40.dta", replace
+  8.   clear
+  9.   local i = `i' + 1
+ 10. }
+(note: variable county was str23, now str28 to accommodate using data's
+       values)
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file fileMergePIC/Data/stlCity40.dta saved
+(note: variable county was str28, now str33 to accommodate using data's
+       values)
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file fileMergePIC/Data/stlCity40.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file fileMergePIC/Data/stlCity40.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file fileMergePIC/Data/stlCity40.dta saved
+
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // copy code to code archive
+. 
+. copy "merge.do" "$projName/CodeArchive/merge.do", replace
+(note: file fileMergePIC/CodeArchive/merge.do not found)
+
+. 
+. // ==========================================================================
+. 
+. // standard closing options
+. 
+. log close _all
+      name:  <unnamed>
+       log:  /Users/NStevens/Documents/Working/fileMergePIC/fileMergePIC.txt
+  log type:  text
+ closed on:   2 Nov 2016, 19:40:42
+--------------------------------------------------------------------------------
