@@ -48,5 +48,8 @@ After discussion with Taylor and looking at the datasets it was determined that 
 
 These files were cleaned from the `clean.do` file and saved under the `preMergeFileCleaning` folder in the local working directoy. This folder was them moved to the `fileMerge` folder located in the working folder on the `fileMerge` branch and published to Github.   
 
+### 2 Nov 2016 - Jes
+
+Working under the fileMerge branch I created the merge.do file. This file runs a loop which adds a variable named `year` to each dataset. The second loop merges the `sample`.dta files with `fullcount`.dta files. i.e. `fullcount1970.dta` is merged with `sample1970.dta`, `fullcount1980.dta` is merged with `sample1980.dta`.  The `year` variable was added to the datasets first so when the merges are completed the merge loop can assert that the `sample` years are merging with the correct `fullcount` years. After all of these loops are merged the third and final loop merges each combined dataset into one large dataset. i.e. `stlCity1970.dta` is saved as the master file, renamed as `stlCity40` and merged with: `stlCity1980.dta` `stlCity1990.dta` `stlCity2000.dta` `stlCity2010.dta`. These files were then added to the `fileMerge` branch under the `fileMergePIC` folder. A pull request was then submitted for the `fileMerge` branch.
 
  >> > > > > > origin/master
