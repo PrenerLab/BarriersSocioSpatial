@@ -52,7 +52,7 @@ purpose - This do-file runs the merge.do file.
 
 created - October 27, 2016
 
-updated - November 2, 2016
+updated - November 3, 2016
 
 author - Jes Stevens
 */
@@ -66,6 +66,9 @@ data files are merged it then merges these files into one dataset.
 
 */
 
+/*
+updates - Added markdown comments to the commands section for future replications.
+*/
 // ==========================================================================
 
 /*
@@ -84,12 +87,22 @@ superordinates  -
 
 /*
 subordinates -
+- stlCity1970.dta
+- stlCity1980.dta
+- stlCity1990.dta
+- stlCity2000.dta
+- stlCity2010.dta
 - stlCity40.dta
 */
 
 // ==========================================================================
 // ==========================================================================
 // ==========================================================================
+
+/***
+Adds year variable to each dataset for `assert` command in merge loop. The variable observations are the year the census
+data was collected.
+***/
 
 cd "/Users/`c(username)'/Documents/Working"
 local dataPath "/Users/`c(username)'/Github Desktop/BarriersSocioSpatial/Working/fileMerge/preMergeFileCleaning"
@@ -108,6 +121,10 @@ forvalues i = 1970(10)2010 {
   clear
 }
 
+/***
+This loop merges the fullcount.dta file with the appropriate sample.dta file based on the year of the census data.
+It also asserts that all of the observations of the year variable in the new merged dataset matches the year of the census data.
+***/
 
 cd "/Users/`c(username)'/Documents/Working"
 local fullNames "fullcount1970.dta fullcount1980.dta fullcount1990.dta fullcount2000.dta fullcount2010.dta"
@@ -128,6 +145,12 @@ foreach fullName in `fullNames' {
   local i = `i' + 1
   local year = `year' + 10
 }
+
+/***
+This loop saves the initial `1970` merged fullcount and sample dataset as the new master dataset named `stlCity40.dta`.
+It then merges the stlCity1970.dta stlCity1980.dta stlCity1990.dta stlCity2000.dta stlCity2010.dta
+datasets into the `stlCity40` dataset so there is only one final dataset.
+***/
 
 local i = 1
 use "$projName/Data/stlCity1970.dta"
