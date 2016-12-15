@@ -52,4 +52,10 @@ These files were cleaned from the `clean.do` file and saved under the `preMergeF
 
 Working under the fileMerge branch I created the merge.do file. This file runs a loop which adds a variable named `year` to each dataset. The second loop merges the `sample`.dta files with `fullcount`.dta files. i.e. `fullcount1970.dta` is merged with `sample1970.dta`, `fullcount1980.dta` is merged with `sample1980.dta`.  The `year` variable was added to the datasets first so when the merges are completed the merge loop can assert that the `sample` years are merging with the correct `fullcount` years. After all of these loops are merged the third and final loop merges each combined dataset into one large dataset. i.e. `stlCity1970.dta` is saved as the master file, renamed as `stlCity40` and merged with: `stlCity1980.dta` `stlCity1990.dta` `stlCity2000.dta` `stlCity2010.dta`. These files were then added to the `fileMerge` branch under the `fileMergePIC` folder. A pull request was then submitted for the `fileMerge` branch.
 
+### 15 Dec 2016 - Jes
+
+Working under the variable-labels branch I created a master.do file and a data.do file. The master do-file creates the project name, copies the original dataset to the working directory. The data do-file pulls the copied, source, dataset from the working directory. It then generates a markdown file, and begins to label the variables from the merged data we previously compiled. The LTDB codebook was used to label the variables and make notes on certain variables. John R. Logan, Zengwang Xu, and Brian Stults. 2012. "Interpolating US Decennial Census Tract Data from as Early as 1970 to 2010: A Longitudinal Tract Database" Professional Geographer, forthcoming. 
+
+Because the dataset includes over 500 variables I used foreach loops that have a variable list. The year that the variable coincides with is in the variable itself. i.e. `pop70` = 1970, `pop80` = 1980, `pop90` = 1990, `pop00` = 2000, `pop10` = 2010, `pop0a` = 2006-2010 ACS data.  
+
  >> > > > > > origin/master
