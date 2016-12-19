@@ -17,6 +17,16 @@ variable in the variable list.
           
           . label variable county "County"
           
+          . label variable tract "Census Tract"
+          
+          . drop placefp10
+          
+          . drop cbsa10
+          
+          . drop metdiv10
+          
+          . drop ccflag10 
+          
           .  foreach var of varlist pop70 pop80 pop90 pop00 pop10 pop0a {
           . label variable `var' "Total Population"
           . }
@@ -575,8 +585,8 @@ variable in the variable list.
             obs:           106                          St. Louis City Census Data
                                                           1970-2010 and ACS 2006-10 Sample
                                                           Data - December 2016
-           vars:           570                          2 Nov 2016 19:40
-           size:       334,218                          (_dta has notes)
+           vars:           566                          2 Nov 2016 19:40
+           size:       332,840                          (_dta has notes)
           ------------------------------------------------------------------------------------------
                         storage   display    value
           variable name   type    format     label      variable label
@@ -584,11 +594,7 @@ variable in the variable list.
           tractid         double  %10.0g                TRTID10
           state           str2    %9s                   State
           county          str33   %33s                  County
-          tract           str20   %20s                  
-          placefp10       long    %12.0g                
-          cbsa10          long    %12.0g                
-          metdiv10        long    %12.0g                
-          ccflag10        byte    %8.0g                 
+          tract           str20   %20s                  Census Tract
           pop70           str21   %21s                  Total Population
           white70         str21   %21s                  Persons of White Race
           black70         str21   %21s                  Persons of Black Race
@@ -1265,6 +1271,7 @@ variable in the variable list.
                                                       * indicated variables have notes
           ------------------------------------------------------------------------------------------
           Sorted by: tractid
+               Note: Dataset has changed since last saved.
           
           . quietly log close index
           
@@ -1276,11 +1283,12 @@ variable in the variable list.
           
                          Dataset:  variableNames/stlCity40Census.dta
                       Last saved:   2 Nov 2016 19:40
+                                   DATA HAVE CHANGED SINCE LAST SAVED
           
                            Label:  St. Louis City Census Data 1970-2010 and ACS 2006-10 Sample Data - December 2016
-             Number of variables:  570
+             Number of variables:  566
           Number of observations:  106
-                            Size:  334,218 bytes ignoring labels, etc.
+                            Size:  332,840 bytes ignoring labels, etc.
           
           _dta:
             1.  This dataset was taken from the Brown LTDB, it has been cleaned and labeled. The
@@ -1329,7 +1337,7 @@ variable in the variable list.
                          warning:  variable has embedded blanks
           
           ------------------------------------------------------------------------------------------
-          tract                                                                          (unlabeled)
+          tract                                                                         Census Tract
           ------------------------------------------------------------------------------------------
           
                             type:  string (str20)
@@ -1342,54 +1350,6 @@ variable in the variable list.
                                    "Census Tract 1211"
           
                          warning:  variable has embedded blanks
-          
-          ------------------------------------------------------------------------------------------
-          placefp10                                                                      (unlabeled)
-          ------------------------------------------------------------------------------------------
-          
-                            type:  numeric (long)
-          
-                           range:  [65000,65000]                units:  1
-                   unique values:  1                        missing .:  0/106
-          
-                      tabulation:  Freq.  Value
-                                     106  65000
-          
-          ------------------------------------------------------------------------------------------
-          cbsa10                                                                         (unlabeled)
-          ------------------------------------------------------------------------------------------
-          
-                            type:  numeric (long)
-          
-                           range:  [41180,41180]                units:  1
-                   unique values:  1                        missing .:  0/106
-          
-                      tabulation:  Freq.  Value
-                                     106  41180
-          
-          ------------------------------------------------------------------------------------------
-          metdiv10                                                                       (unlabeled)
-          ------------------------------------------------------------------------------------------
-          
-                            type:  numeric (long)
-          
-                           range:  [99999,99999]                units:  1
-                   unique values:  1                        missing .:  0/106
-          
-                      tabulation:  Freq.  Value
-                                     106  99999
-          
-          ------------------------------------------------------------------------------------------
-          ccflag10                                                                       (unlabeled)
-          ------------------------------------------------------------------------------------------
-          
-                            type:  numeric (byte)
-          
-                           range:  [1,1]                        units:  1
-                   unique values:  1                        missing .:  0/106
-          
-                      tabulation:  Freq.  Value
-                                     106  1
           
           ------------------------------------------------------------------------------------------
           pop70                                                                     Total Population

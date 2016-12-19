@@ -3,12 +3,13 @@
 
                Dataset:  variableNames/stlCity40Census.dta
             Last saved:   2 Nov 2016 19:40
+                         DATA HAVE CHANGED SINCE LAST SAVED
 
                  Label:  St. Louis City Census Data 1970-2010 and ACS 2006-10 Sa
 > mple Data - December 2016
-   Number of variables:  570
+   Number of variables:  566
 Number of observations:  106
-                  Size:  334,218 bytes ignoring labels, etc.
+                  Size:  332,840 bytes ignoring labels, etc.
 
 _dta:
   1.  This dataset was taken from the Brown LTDB, it has been cleaned and
@@ -57,7 +58,7 @@ county                                                                    County
                warning:  variable has embedded blanks
 
 --------------------------------------------------------------------------------
-tract                                                                (unlabeled)
+tract                                                               Census Tract
 --------------------------------------------------------------------------------
 
                   type:  string (str20)
@@ -70,54 +71,6 @@ tract                                                                (unlabeled)
                          "Census Tract 1211"
 
                warning:  variable has embedded blanks
-
---------------------------------------------------------------------------------
-placefp10                                                            (unlabeled)
---------------------------------------------------------------------------------
-
-                  type:  numeric (long)
-
-                 range:  [65000,65000]                units:  1
-         unique values:  1                        missing .:  0/106
-
-            tabulation:  Freq.  Value
-                           106  65000
-
---------------------------------------------------------------------------------
-cbsa10                                                               (unlabeled)
---------------------------------------------------------------------------------
-
-                  type:  numeric (long)
-
-                 range:  [41180,41180]                units:  1
-         unique values:  1                        missing .:  0/106
-
-            tabulation:  Freq.  Value
-                           106  41180
-
---------------------------------------------------------------------------------
-metdiv10                                                             (unlabeled)
---------------------------------------------------------------------------------
-
-                  type:  numeric (long)
-
-                 range:  [99999,99999]                units:  1
-         unique values:  1                        missing .:  0/106
-
-            tabulation:  Freq.  Value
-                           106  99999
-
---------------------------------------------------------------------------------
-ccflag10                                                             (unlabeled)
---------------------------------------------------------------------------------
-
-                  type:  numeric (byte)
-
-                 range:  [1,1]                        units:  1
-         unique values:  1                        missing .:  0/106
-
-            tabulation:  Freq.  Value
-                           106  1
 
 --------------------------------------------------------------------------------
 pop70                                                           Total Population

@@ -70,6 +70,11 @@ the variable list.
 label variable year "Year"
 label variable state "State"
 label variable county "County"
+label variable tract "Census Tract"
+drop placefp10
+drop cbsa10
+drop metdiv10
+drop ccflag10 
 
 foreach var of varlist pop70 pop80 pop90 pop00 pop10 pop0a {
 label variable `var' "Total Population"
