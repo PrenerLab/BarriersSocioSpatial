@@ -1,0 +1,847 @@
+
+. describe
+
+Contains data from variableNames/stlCity40Census.dta
+  obs:           106                          St. Louis City Census Data
+                                                1970-2010 and ACS 2006-10 Sample
+                                                Data - December 2016
+ vars:           566                          2 Nov 2016 19:40
+ size:       332,840                          (_dta has notes)
+--------------------------------------------------------------------------------
+              storage   display    value
+variable name   type    format     label      variable label
+--------------------------------------------------------------------------------
+tractid         double  %10.0g                TRTID10
+state           str2    %9s                   State
+county          str33   %33s                  County
+tract           str20   %20s                  Census Tract
+pop70           str21   %21s                  Total Population
+white70         str21   %21s                  Persons of White Race
+black70         str21   %21s                  Persons of Black Race
+asian70         str21   %21s                  Persons of Asian Race and Pacific
+                                                Islander
+haw70           str21   %21s                  Persons of Hawaiian Race
+india70         str21   %21s                  Persons of Asian Indian Race
+china70         str21   %21s                  Persons of Chinese Race
+filip70         str21   %21s                  Persons of Filipino Race
+japan70         str21   %21s                  Persons of Japanese Race
+korea70         str21   %21s                  Persons of Korean Race
+hu70            float   %9.0g                 Housing Units
+vac70           str21   %21s                  Vacant Housing Units
+ohu70           str21   %21s                  Occupied Housing Units
+dmulti70        str21   %21s                * Housing units
+multi70         str21   %21s                  Housing units in multi-unit
+                                                structures
+a18und70        str21   %21s                  Persons age 17 years and under
+a60up70         str21   %21s                  Persons age 60 years and over
+a75up70         str21   %21s                  Persons age 75 years and over
+agewht70        str21   %21s                  White Population with Known Age
+                                                Distribution
+a15wht70        str21   %21s                  0-15 years old of White Race
+a60wht70        str21   %21s                  60 Years and Older of White Race
+ageblk70        str21   %21s                  Black Population with Known Age
+                                                Distribution
+a15blk70        str21   %21s                  0-15 years old of Black Race
+a60blk70        str21   %21s                  60 years and older of Black Race
+ag15up70        str21   %21s                  Persons age 15 years and over
+mar70           str21   %21s                  Currently married (excluding
+                                                separated)
+wds70           str21   %21s                  Widowed, Divorced, and Separated
+own70           str21   %21s                  Owner-occupied housing units
+rent70          str21   %21s                  Renter-occupied housing units
+year            float   %9.0g                 Year
+mex70           str11   %11s                  Mexicans
+pr70            str11   %11s                  Puerto Ricans
+cuban70         str11   %11s                  Cubans
+family70        str11   %11s                  Total Families
+fhh70           str11   %11s                  Female-headed families with
+                                                children
+pop70sp2        str11   %11s                * Total Population from sample-based
+                                                data
+ruanc70         str11   %11s                  Persons of Russian/USSR parentage
+                                                or Ancestry
+itanc70         str11   %11s                  Persons of Italian parentage or
+                                                Ancestry
+geanc70         str11   %11s                  Persons of German parentage or
+                                                Ancestry
+iranc70         str11   %11s                  Persons of Irish parentage or
+                                                Ancestry
+scanc70         str11   %11s                  Persons of Scandinavian parentage
+                                                or Ancestry
+rufb70          str11   %11s                  Persons who were born in Russia/
+                                                USSR
+itfb70          str11   %11s                  Persons who were born in Italy
+gefb70          str11   %11s                  Persons who were born in Germany
+irfb70          str11   %11s                  Persons who were born in Ireland
+scfb70          str11   %11s                  Persons who were born in Ireland
+fb70            str11   %11s                  Foreign-born
+nat70           str11   %11s                * Naturalized Foreign-Born
+pop70sp1        str11   %11s                * Total Population from sample-based
+                                                data
+n10imm70        str11   %11s                  Recent Immigrants (within the past
+                                                10 years)
+ag25up70        str11   %11s                  Population 25 years and over
+hs70            str11   %11s                  Persons with high school degree or
+                                                less
+col70           str11   %11s                  Persons with at least a 4 year
+                                                college degree
+clf70           str11   %11s                  Civilian labor force 16 years and
+                                                over
+unemp70         str11   %11s                  Unemployed
+dflabf70        str11   %11s                  Females 16 years and over, except
+                                                in Armed Forces
+flabf70         str11   %11s                  Females in labor force
+empclf70        str11   %11s                  Employed persons 16 years and over
+prof70          str11   %11s                  Professional employees (by
+                                                occupations)
+manuf70         str11   %11s                  Manufacturing employees (by
+                                                industries)
+semp70          str11   %11s                  Self-employed
+ag16cv70        str11   %11s                  Civilian population 16 years and
+                                                over
+vet70           str11   %11s                  Veterans
+cni16u70        str11   %11s                * Civilian non-institutionalized
+                                                persons 16-64 years old
+dis70           str11   %11s                  Disabled
+dpov70          str11   %11s                  Persons for whom poverty status is
+                                                determined
+npov70          str11   %11s                  Persons in poverty
+n65pov70        str11   %11s                  Persons 65 years and older in
+                                                poverty
+dfmpov70        str11   %11s                  Families for whom poverty status
+                                                is determined
+nfmpov70        str11   %11s                  Families with children in poverty
+nwpov70         str11   %11s                  whites in poverty
+dwpov70         str11   %11s                  White persons for whom poverty
+                                                status is determined
+nbpov70         str11   %11s                  Blacks in poverty
+dbpov70         str11   %11s                  Black persons for whom poverty
+                                                status is determined
+incpc70         float   %9.0g                 Per capita income
+hu70sp          str11   %11s                  Housing units in sample-based data
+h30old70        str11   %11s                  Structures built more than 30
+                                                years ago
+ohu70sp         str11   %11s                  Occupied Housing Units in
+                                                sample-based data
+h10yrs70        str11   %11s                  Household heads moved into unit
+                                                less than 10 years ago
+hinc70          str11   %11s                  Median household income
+mhmval70        str11   %11s                  Median home value
+mrent70         str11   %11s                  Median monthly contract rent
+hh70            str11   %11s                  Total households in sample-based
+                                                data
+pop80           float   %9.0g                 Total Population
+nhwht80         float   %9.0g                 Persons of White Race, Not
+                                                Hispanic Origin
+nhblk80         float   %9.0g                 Persons of Black Race, Not
+                                                Hispanic Origin
+ntv80           float   %9.0g                 Persons of Native American Race
+asian80         float   %9.0g                 Persons of Asian Race and Pacific
+                                                Islander
+hisp80          float   %9.0g                 Persons of Hispanic Origin
+haw80           float   %9.0g                 Persons of Hawaiian Race
+india80         float   %9.0g                 Persons of Asian Indian Race
+china80         float   %9.0g                 Persons of Chinese Race
+filip80         float   %9.0g                 Persons of Filipino Race
+japan80         float   %9.0g                 Persons of Japanese Race
+korea80         float   %9.0g                 Persons of Korean Race
+viet80          float   %9.0g                 Persons of Vietnamese Race
+mex80           float   %9.0g                 Mexicans
+pr80            float   %9.0g                 Puerto Ricans
+cuban80         float   %9.0g                 Cubans
+hu80            float   %9.0g                 Housing Units
+vac80           float   %9.0g                 Vacant Housing Units
+ohu80           float   %9.0g                 Occupied Housing Units
+a18und80        float   %9.0g                 Persons age 17 years and under
+a60up80         float   %9.0g                 Persons age 60 years and over
+a75up80         float   %9.0g                 Persons age 75 years and over
+ag15up80        str21   %21s                  Persons age 15 years and over
+mar80           str21   %21s                  Currently married (excluding
+                                                separated)
+wds80           str21   %21s                  Widowed, Divorced, and Separated
+mhmval80        str16   %16s                  Median home value
+mrent80         str16   %16s                  Median monthly contract rent
+own80           str21   %21s                  Owner-occupied housing units
+rent80          str21   %21s                  Renter-occupied housing units
+agewht80        float   %9.0g                 White Population with Known Age
+                                                Distribution
+a15wht80        float   %9.0g               * 0-15 years old of White Race
+a60wht80        float   %9.0g                 60 Years and Older of White Race
+ageblk80        float   %9.0g                 Black Population with Known Age
+                                                Distribution
+a15blk80        float   %9.0g               * 0-15 years old of Black Race
+a60blk80        float   %9.0g                 60 years and older of Black Race
+agehsp80        float   %9.0g                 Hispanic Population with Known Age
+                                                Distribution
+a15hsp80        float   %9.0g               * 0-15 years old of Hispanic Origins
+a60hsp80        float   %9.0g                 60 years and older persons of
+                                                Hispanic Origins
+agentv80        float   %9.0g                 Native American Population with
+                                                Known Age Distribution
+a15ntv80        float   %9.0g               * 0-15 years old of Native American
+                                                Race
+a60ntv80        float   %9.0g                 60 years and Older Persons of
+                                                Native American Race
+ageasn80        float   %9.0g                 Asian and Pacific Islander
+                                                Population with Known Age
+                                                Distribution
+a15asn80        float   %9.0g               * 0-15 years old of Asians and
+                                                Pacific Islanders
+a60asn80        float   %9.0g                 60 years and Older Persons of
+                                                Asians and Pacific Islanders
+family80        float   %9.0g                 Total Families
+fhh80           float   %9.0g                 Female-headed families with
+                                                children
+ruanc80         float   %9.0g                 Persons of Russian/USSR parentage
+                                                or Ancestry
+itanc80         float   %9.0g                 Persons of Italian parentage or
+                                                Ancestry
+geanc80         float   %9.0g                 Persons of German parentage or
+                                                Ancestry
+iranc80         float   %9.0g                 Persons of Irish parentage or
+                                                Ancestry
+scanc80         float   %9.0g                 Persons of Scandinavian parentage
+                                                or Ancestry
+pop80sf3        float   %9.0g               * Total population from sample-based
+                                                data
+dfb80           float   %9.0g               * Total population from sample-based
+                                                data
+fb80            float   %9.0g                 Foreign-born
+ag5up80         float   %9.0g               * Persons 5 years and Over
+olang80         float   %9.0g               * Persons who speak language other
+                                                than English at home
+lep80           float   %9.0g               * Persons who speak English not well
+ag25up80        float   %9.0g                 Population 25 years and over
+hs80            float   %9.0g                 Persons with high school degree or
+                                                less
+col80           float   %9.0g                 Persons with at least a 4 year
+                                                college degree
+clf80           float   %9.0g                 Civilian labor force 16 years and
+                                                over
+unemp80         float   %9.0g                 Unemployed
+dflabf80        float   %9.0g                 Females 16 years and over, except
+                                                in Armed Forces
+flabf80         float   %9.0g                 Females in labor force
+empclf80        float   %9.0g                 Employed persons 16 years and over
+prof80          float   %9.0g                 Professional employees (by
+                                                occupations)
+manuf80         float   %9.0g                 Manufacturing employees (by
+                                                industries)
+semp80          float   %9.0g                 Self-employed
+ag16cv80        float   %9.0g                 Civilian population 16 years and
+                                                over
+vet80           float   %9.0g                 Veterans
+cni16u80        float   %9.0g               * Civilian non-institutionalized
+                                                persons 16-64 years old
+dis80           float   %9.0g                 Disabled
+dpov80          float   %9.0g                 Persons for whom poverty status is
+                                                determined
+npov80          float   %9.0g                 Persons in poverty
+n65pov80        float   %9.0g                 Persons 65 years and older in
+                                                poverty
+dfmpov80        float   %9.0g                 Families for whom poverty status
+                                                is determined
+nfmpov80        float   %9.0g                 Families with children in poverty
+dwpov80         float   %9.0g                 White persons for whom poverty
+                                                status is determined
+nwpov80         float   %9.0g                 whites in poverty
+dbpov80         float   %9.0g                 Black persons for whom poverty
+                                                status is determined
+nbpov80         float   %9.0g                 Blacks in poverty
+dnapov80        float   %9.0g                 Native American for whom poverty
+                                                status is determined
+nnapov80        float   %9.0g                 Native Americans in poverty
+dhpov80         float   %9.0g                 Hispanics for whom poverty status
+                                                is determined
+nhpov80         float   %9.0g                 Hispanics in poverty
+dapov80         float   %9.0g                 Asians and Pacific Islanders for
+                                                whom poverty status is
+                                                determined
+napov80         float   %9.0g                 Asians and Pacific Islanders in
+                                                poverty
+incpc80         float   %9.0g                 Per capita income
+hu80sp          float   %9.0g                 Housing units in sample-based data
+h30old80        float   %9.0g                 Structures built more than 30
+                                                years ago
+ohu80sp         float   %9.0g                 Occupied Housing Units in
+                                                sample-based data
+h10yrs80        float   %9.0g                 Household heads moved into unit
+                                                less than 10 years ago
+dmulti80        float   %9.0g               * Housing units
+multi80         float   %9.0g                 Housing units in multi-unit
+                                                structures
+hinc80          float   %9.0g                 Median household income
+hincw80         float   %9.0g                 Median household income for whites
+hincb80         float   %9.0g                 Median household income for blacks
+hinch80         float   %9.0g                 Median household income for
+                                                Hispanics
+hinca80         float   %9.0g                 Median household income for Asians
+                                                and Pacific Islanders
+hh80            float   %9.0g                 Total households in sample-based
+                                                data
+hhw80           float   %9.0g                 Total white households in
+                                                sample-based data
+hhb80           float   %9.0g                 Total black households in
+                                                sample-based data
+hhh80           float   %9.0g                 Total Hispanic households in
+                                                sample-based data
+hha80           float   %9.0g                 Total Asian/Pacific Islander
+                                                households in sample-based data
+pop80sf4        float   %9.0g               * Total population from sample-based
+                                                data
+gefb80          float   %9.0g                 Persons who were born in Germany
+irfb80          float   %9.0g                 Persons who were born in Ireland
+itfb80          float   %9.0g                 Persons who were born in Italy
+rufb80          float   %9.0g                 Persons who were born in Russia/
+                                                USSR
+scfb80          float   %9.0g                 Persons who were born in Ireland
+n10imm80        float   %9.0g                 Recent Immigrants (within the past
+                                                10 years)
+nat80           float   %9.0g               * Naturalized Foreign-Born
+pop90           float   %9.0g                 Total Population
+nhwht90         float   %9.0g                 Persons of White Race, Not
+                                                Hispanic Origin
+nhblk90         float   %9.0g                 Persons of Black Race, Not
+                                                Hispanic Origin
+ntv90           float   %9.0g                 Persons of Native American Race
+asian90         float   %9.0g                 Persons of Asian Race and Pacific
+                                                Islander
+hisp90          float   %9.0g                 Persons of Hispanic Origin
+haw90           float   %9.0g                 Persons of Hawaiian Race
+india90         float   %9.0g                 Persons of Asian Indian Race
+china90         float   %9.0g                 Persons of Chinese Race
+filip90         float   %9.0g                 Persons of Filipino Race
+japan90         float   %9.0g                 Persons of Japanese Race
+korea90         float   %9.0g                 Persons of Korean Race
+viet90          float   %9.0g                 Persons of Vietnamese Race
+mex90           float   %9.0g                 Mexicans
+pr90            float   %9.0g                 Puerto Ricans
+cuban90         float   %9.0g                 Cubans
+hu90            float   %9.0g                 Housing Units
+vac90           float   %9.0g                 Vacant Housing Units
+ohu90           float   %9.0g                 Occupied Housing Units
+a18und90        float   %9.0g                 Persons age 17 years and under
+a60up90         float   %9.0g                 Persons age 60 years and over
+a75up90         float   %9.0g                 Persons age 75 years and over
+agewht90        float   %9.0g                 White Population with Known Age
+                                                Distribution
+a15wht90        float   %9.0g                 0-15 years old of White Race
+a60wht90        float   %9.0g                 60 Years and Older of White Race
+ageblk90        float   %9.0g                 Black Population with Known Age
+                                                Distribution
+a15blk90        float   %9.0g                 0-15 years old of Black Race
+a60blk90        float   %9.0g                 60 years and older of Black Race
+agehsp90        float   %9.0g                 Hispanic Population with Known Age
+                                                Distribution
+a15hsp90        float   %9.0g                 0-15 years old of Hispanic Origins
+a60hsp90        float   %9.0g                 60 years and older persons of
+                                                Hispanic Origins
+agentv90        float   %9.0g                 Native American Population with
+                                                Known Age Distribution
+a15ntv90        float   %9.0g                 0-15 years old of Native American
+                                                Race
+a60ntv90        float   %9.0g                 60 years and Older Persons of
+                                                Native American Race
+ageasn90        float   %9.0g                 Asian and Pacific Islander
+                                                Population with Known Age
+                                                Distribution
+a15asn90        float   %9.0g                 0-15 years old of Asians and
+                                                Pacific Islanders
+a60asn90        float   %9.0g                 60 years and Older Persons of
+                                                Asians and Pacific Islanders
+ag15up90        float   %9.0g                 Persons age 15 years and over
+mar90           float   %9.0g                 Currently married (excluding
+                                                separated)
+wds90           float   %9.0g                 Widowed, Divorced, and Separated
+mhmval90        str16   %16s                  Median home value
+mrent90         str18   %18s                  Median monthly contract rent
+own90           float   %9.0g                 Owner-occupied housing units
+rent90          float   %9.0g                 Renter-occupied housing units
+family90        float   %9.0g                 Total Families
+fhh90           float   %9.0g                 Female-headed families with
+                                                children
+pop90sf3        float   %9.0g               * Total population from sample-based
+                                                data
+pop90sf4        str11   %11s                * Total population from sample-based
+                                                data
+ruanc90         float   %9.0g                 Persons of Russian/USSR parentage
+                                                or Ancestry
+itanc90         float   %9.0g                 Persons of Italian parentage or
+                                                Ancestry
+geanc90         float   %9.0g                 Persons of German parentage or
+                                                Ancestry
+iranc90         float   %9.0g                 Persons of Irish parentage or
+                                                Ancestry
+scanc90         float   %9.0g                 Persons of Scandinavian parentage
+                                                or Ancestry
+rufb90          str11   %11s                  Persons who were born in Russia/
+                                                USSR
+itfb90          str11   %11s                  Persons who were born in Italy
+gefb90          str11   %11s                  Persons who were born in Germany
+irfb90          str11   %11s                  Persons who were born in Ireland
+scfb90          str11   %11s                  Persons who were born in Ireland
+fb90            float   %9.0g                 Foreign-born
+nat90           float   %9.0g               * Naturalized Foreign-Born
+n10imm90        float   %9.0g                 Recent Immigrants (within the past
+                                                10 years)
+ag5up90         float   %9.0g               * Persons 5 years and Over
+olang90         float   %9.0g               * Persons who speak language other
+                                                than English at home
+lep90           float   %9.0g               * Persons who speak English not well
+ag25up90        float   %9.0g                 Population 25 years and over
+hs90            float   %9.0g                 Persons with high school degree or
+                                                less
+col90           float   %9.0g                 Persons with at least a 4 year
+                                                college degree
+clf90           float   %9.0g                 Civilian labor force 16 years and
+                                                over
+unemp90         float   %9.0g                 Unemployed
+dflabf90        float   %9.0g                 Females 16 years and over, except
+                                                in Armed Forces
+flabf90         float   %9.0g                 Females in labor force
+empclf90        float   %9.0g                 Employed persons 16 years and over
+prof90          float   %9.0g                 Professional employees (by
+                                                occupations)
+manuf90         float   %9.0g                 Manufacturing employees (by
+                                                industries)
+semp90          float   %9.0g                 Self-employed
+ag16cv90        float   %9.0g                 Civilian population 16 years and
+                                                over
+vet90           float   %9.0g                 Veterans
+cni16u90        float   %9.0g               * Civilian non-institutionalized
+                                                persons 16-64 years old
+dis90           float   %9.0g                 Disabled
+dpov90          float   %9.0g                 Persons for whom poverty status is
+                                                determined
+npov90          float   %9.0g                 Persons in poverty
+n65pov90        float   %9.0g                 Persons 65 years and older in
+                                                poverty
+dfmpov90        float   %9.0g                 Families for whom poverty status
+                                                is determined
+nfmpov90        float   %9.0g                 Families with children in poverty
+dwpov90         float   %9.0g                 White persons for whom poverty
+                                                status is determined
+nwpov90         float   %9.0g                 whites in poverty
+dbpov90         float   %9.0g                 Black persons for whom poverty
+                                                status is determined
+nbpov90         float   %9.0g                 Blacks in poverty
+dnapov90        float   %9.0g                 Native American for whom poverty
+                                                status is determined
+nnapov90        float   %9.0g                 Native Americans in poverty
+dhpov90         float   %9.0g                 Hispanics for whom poverty status
+                                                is determined
+nhpov90         float   %9.0g                 Hispanics in poverty
+dapov90         float   %9.0g                 Asians and Pacific Islanders for
+                                                whom poverty status is
+                                                determined
+napov90         float   %9.0g                 Asians and Pacific Islanders in
+                                                poverty
+incpc90         float   %9.0g                 Per capita income
+hu90sp          float   %9.0g                 Housing units in sample-based data
+h30old90        float   %9.0g                 Structures built more than 30
+                                                years ago
+ohu90sp         float   %9.0g                 Occupied Housing Units in
+                                                sample-based data
+h10yrs90        float   %9.0g                 Household heads moved into unit
+                                                less than 10 years ago
+dmulti90        float   %9.0g               * Housing units
+multi90         float   %9.0g                 Housing units in multi-unit
+                                                structures
+hinc90          str11   %11s                  Median household income
+hincw90         str11   %11s                  Median household income for whites
+hincb90         str11   %11s                  Median household income for blacks
+hinch90         str11   %11s                  Median household income for
+                                                Hispanics
+hinca90         str11   %11s                  Median household income for Asians
+                                                and Pacific Islanders
+hh90            float   %9.0g                 Total households in sample-based
+                                                data
+hhw90           float   %9.0g                 Total white households in
+                                                sample-based data
+hhb90           float   %9.0g                 Total black households in
+                                                sample-based data
+hhh90           float   %9.0g                 Total Hispanic households in
+                                                sample-based data
+hha90           float   %9.0g                 Total Asian/Pacific Islander
+                                                households in sample-based data
+pop00           float   %9.0g                 Total Population
+nhwht00         float   %9.0g                 Persons of White Race, Not
+                                                Hispanic Origin
+nhblk00         float   %9.0g                 Persons of Black Race, Not
+                                                Hispanic Origin
+ntv00           float   %9.0g                 Persons of Native American Race
+asian00         float   %9.0g                 Persons of Asian Race and Pacific
+                                                Islander
+hisp00          float   %9.0g                 Persons of Hispanic Origin
+haw00           float   %9.0g                 Persons of Hawaiian Race
+india00         float   %9.0g                 Persons of Asian Indian Race
+china00         float   %9.0g                 Persons of Chinese Race
+filip00         float   %9.0g                 Persons of Filipino Race
+japan00         float   %9.0g                 Persons of Japanese Race
+korea00         float   %9.0g                 Persons of Korean Race
+viet00          float   %9.0g                 Persons of Vietnamese Race
+mex00           float   %9.0g                 Mexicans
+pr00            float   %9.0g                 Puerto Ricans
+cuban00         float   %9.0g                 Cubans
+hu00            float   %9.0g                 Housing Units
+vac00           float   %9.0g                 Vacant Housing Units
+ohu00           float   %9.0g                 Occupied Housing Units
+a18und00        float   %9.0g                 Persons age 17 years and under
+a60up00         float   %9.0g                 Persons age 60 years and over
+a75up00         float   %9.0g                 Persons age 75 years and over
+agewht00        float   %9.0g                 White Population with Known Age
+                                                Distribution
+a15wht00        float   %9.0g                 0-15 years old of White Race
+a60wht00        float   %9.0g                 60 Years and Older of White Race
+ageblk00        float   %9.0g                 Black Population with Known Age
+                                                Distribution
+a15blk00        float   %9.0g                 0-15 years old of Black Race
+a60blk00        float   %9.0g                 60 years and older of Black Race
+agehsp00        float   %9.0g                 Hispanic Population with Known Age
+                                                Distribution
+a15hsp00        float   %9.0g                 0-15 years old of Hispanic Origins
+a60hsp00        float   %9.0g                 60 years and older persons of
+                                                Hispanic Origins
+agentv00        float   %9.0g                 Native American Population with
+                                                Known Age Distribution
+a15ntv00        float   %9.0g                 0-15 years old of Native American
+                                                Race
+a60ntv00        float   %9.0g                 60 years and Older Persons of
+                                                Native American Race
+ageasn00        float   %9.0g                 Asian and Pacific Islander
+                                                Population with Known Age
+                                                Distribution
+a15asn00        float   %9.0g                 0-15 years old of Asians and
+                                                Pacific Islanders
+a60asn00        float   %9.0g                 60 years and Older Persons of
+                                                Asians and Pacific Islanders
+family00        float   %9.0g                 Total Families
+fhh00           float   %9.0g                 Female-headed families with
+                                                children
+own00           float   %9.0g                 Owner-occupied housing units
+rent00          float   %9.0g                 Renter-occupied housing units
+pop00sf3        float   %9.0g               * Total population from sample-based
+                                                data
+ruanc00         float   %9.0g                 Persons of Russian/USSR parentage
+                                                or Ancestry
+itanc00         float   %9.0g                 Persons of Italian parentage or
+                                                Ancestry
+geanc00         float   %9.0g                 Persons of German parentage or
+                                                Ancestry
+iranc00         float   %9.0g                 Persons of Irish parentage or
+                                                Ancestry
+scanc00         float   %9.0g                 Persons of Scandinavian parentage
+                                                or Ancestry
+rufb00          float   %9.0g                 Persons who were born in Russia/
+                                                USSR
+itfb00          float   %9.0g                 Persons who were born in Italy
+gefb00          float   %9.0g                 Persons who were born in Germany
+irfb00          float   %9.0g                 Persons who were born in Ireland
+scfb00          float   %9.0g                 Persons who were born in Ireland
+fb00            float   %9.0g                 Foreign-born
+nat00           float   %9.0g               * Naturalized Foreign-Born
+n10imm00        float   %9.0g                 Recent Immigrants (within the past
+                                                10 years)
+ag5up00         float   %9.0g               * Persons 5 years and Over
+olang00         float   %9.0g               * Persons who speak language other
+                                                than English at home
+lep00           float   %9.0g               * Persons who speak English not well
+ag25up00        float   %9.0g                 Population 25 years and over
+hs00            float   %9.0g                 Persons with high school degree or
+                                                less
+col00           float   %9.0g                 Persons with at least a 4 year
+                                                college degree
+ag15up00        float   %9.0g                 Persons age 15 years and over
+mar00           float   %9.0g                 Currently married (excluding
+                                                separated)
+wds00           float   %9.0g                 Widowed, Divorced, and Separated
+clf00           float   %9.0g                 Civilian labor force 16 years and
+                                                over
+unemp00         float   %9.0g                 Unemployed
+dflabf00        float   %9.0g                 Females 16 years and over, except
+                                                in Armed Forces
+flabf00         float   %9.0g                 Females in labor force
+empclf00        float   %9.0g                 Employed persons 16 years and over
+prof00          float   %9.0g                 Professional employees (by
+                                                occupations)
+manuf00         float   %9.0g                 Manufacturing employees (by
+                                                industries)
+semp00          float   %9.0g                 Self-employed
+ag18cv00        float   %9.0g                 Self-employed
+vet00           float   %9.0g                 Veterans
+cni16u00        float   %9.0g               * Civilian non-institutionalized
+                                                persons 16-64 years old
+dis00           float   %9.0g                 Disabled
+dpov00          float   %9.0g                 Persons for whom poverty status is
+                                                determined
+npov00          float   %9.0g                 Persons in poverty
+n65pov00        float   %9.0g                 Persons 65 years and older in
+                                                poverty
+dfmpov00        float   %9.0g                 Families for whom poverty status
+                                                is determined
+nfmpov00        float   %9.0g                 Families with children in poverty
+dwpov00         float   %9.0g                 White persons for whom poverty
+                                                status is determined
+nwpov00         float   %9.0g                 whites in poverty
+dbpov00         float   %9.0g                 Black persons for whom poverty
+                                                status is determined
+nbpov00         float   %9.0g                 Blacks in poverty
+dnapov00        float   %9.0g                 Native American for whom poverty
+                                                status is determined
+nnapov00        float   %9.0g                 Native Americans in poverty
+dhpov00         float   %9.0g                 Hispanics for whom poverty status
+                                                is determined
+nhpov00         float   %9.0g                 Hispanics in poverty
+dapov00         float   %9.0g                 Asians and Pacific Islanders for
+                                                whom poverty status is
+                                                determined
+napov00         float   %9.0g                 Asians and Pacific Islanders in
+                                                poverty
+incpc00         float   %9.0g                 Per capita income
+hu00sp          float   %9.0g                 Housing units in sample-based data
+h30old00        float   %9.0g                 Structures built more than 30
+                                                years ago
+ohu00sp         float   %9.0g                 Occupied Housing Units in
+                                                sample-based data
+h10yrs00        float   %9.0g                 Household heads moved into unit
+                                                less than 10 years ago
+dmulti00        float   %9.0g               * Housing units
+multi00         float   %9.0g                 Housing units in multi-unit
+                                                structures
+hinc00          str11   %11s                  Median household income
+hincw00         str11   %11s                  Median household income for whites
+hincb00         str11   %11s                  Median household income for blacks
+hinch00         str11   %11s                  Median household income for
+                                                Hispanics
+hinca00         str11   %11s                  Median household income for Asians
+                                                and Pacific Islanders
+mhmval00        str11   %11s                  Median home value
+mrent00         str11   %11s                  Median monthly contract rent
+hh00            float   %9.0g                 Total households in sample-based
+                                                data
+hhw00           float   %9.0g                 Total white households in
+                                                sample-based data
+hhb00           float   %9.0g                 Total black households in
+                                                sample-based data
+hhh00           float   %9.0g                 Total Hispanic households in
+                                                sample-based data
+hha00           float   %9.0g                 Total Asian/Pacific Islander
+                                                households in sample-based data
+pop10           long    %8.0g                 Total Population
+nhwht10         int     %8.0g                 Persons of White Race, Not
+                                                Hispanic Origin
+nhblk10         int     %8.0g                 Persons of Black Race, Not
+                                                Hispanic Origin
+ntv10           int     %8.0g                 Persons of Native American Race
+asian10         int     %8.0g                 Persons of Asian Race and Pacific
+                                                Islander
+hisp10          int     %8.0g                 Persons of Hispanic Origin
+haw10           int     %8.0g                 Persons of Hawaiian Race
+india10         int     %8.0g                 Persons of Asian Indian Race
+china10         int     %8.0g                 Persons of Chinese Race
+filip10         int     %8.0g                 Persons of Filipino Race
+japan10         int     %8.0g                 Persons of Japanese Race
+korea10         int     %8.0g                 Persons of Korean Race
+viet10          int     %8.0g                 Persons of Vietnamese Race
+mex10           int     %8.0g                 Mexicans
+pr10            int     %8.0g                 Puerto Ricans
+cuban10         int     %8.0g                 Cubans
+family10        int     %8.0g                 Total Families
+fhh10           int     %8.0g                 Female-headed families with
+                                                children
+hu10            int     %8.0g                 Housing Units
+vac10           int     %8.0g                 Vacant Housing Units
+ohu10           int     %8.0g                 Occupied Housing Units
+own10           int     %8.0g                 Owner-occupied housing units
+rent10          int     %8.0g                 Renter-occupied housing units
+a18und10        int     %8.0g                 Persons age 17 years and under
+a60up10         int     %8.0g                 Persons age 60 years and over
+a75up10         int     %8.0g                 Persons age 75 years and over
+agewht10        int     %8.0g                 White Population with Known Age
+                                                Distribution
+a15wht10        int     %8.0g                 0-15 years old of White Race
+a60wht10        int     %8.0g                 60 Years and Older of White Race
+ageblk10        int     %8.0g                 Black Population with Known Age
+                                                Distribution
+a15blk10        int     %8.0g                 0-15 years old of Black Race
+a60blk10        int     %8.0g                 60 years and older of Black Race
+agehsp10        int     %8.0g                 Hispanic Population with Known Age
+                                                Distribution
+a15hsp10        int     %8.0g                 0-15 years old of Hispanic Origins
+a60hsp10        int     %8.0g                 60 years and older persons of
+                                                Hispanic Origins
+ageasn10        int     %8.0g                 Asian and Pacific Islander
+                                                Population with Known Age
+                                                Distribution
+a15asn10        int     %8.0g                 0-15 years old of Asians and
+                                                Pacific Islanders
+a60asn10        int     %8.0g                 60 years and Older Persons of
+                                                Asians and Pacific Islanders
+agentv10        int     %8.0g                 Native American Population with
+                                                Known Age Distribution
+a15ntv10        int     %8.0g                 0-15 years old of Native American
+                                                Race
+a60ntv10        int     %8.0g                 60 years and Older Persons of
+                                                Native American Race
+pop0a           long    %8.0g                 Total Population
+nhwht0a         int     %8.0g                 Persons of White Race, Not
+                                                Hispanic Origin
+nhblk0a         int     %8.0g                 Persons of Black Race, Not
+                                                Hispanic Origin
+ntv0a           int     %8.0g                 Persons of Native American Race
+haw0a           int     %8.0g                 Persons of Hawaiian Race
+asian0a         int     %8.0g                 Persons of Asian Race and Pacific
+                                                Islander
+hisp0a          int     %8.0g                 Persons of Hispanic Origin
+india0a         int     %8.0g                 Persons of Asian Indian Race
+china0a         int     %8.0g                 Persons of Chinese Race
+filip0a         int     %8.0g                 Persons of Filipino Race
+japan0a         int     %8.0g                 Persons of Japanese Race
+korea0a         int     %8.0g                 Persons of Korean Race
+viet0a          int     %8.0g                 Persons of Vietnamese Race
+ruanc0a         int     %8.0g                 Persons of Russian/USSR parentage
+                                                or Ancestry
+itanc0a         int     %8.0g                 Persons of Italian parentage or
+                                                Ancestry
+geanc0a         int     %8.0g                 Persons of German parentage or
+                                                Ancestry
+iranc0a         int     %8.0g                 Persons of Irish parentage or
+                                                Ancestry
+scanc0a         int     %8.0g                 Persons of Scandinavian parentage
+                                                or Ancestry
+mex0a           int     %8.0g                 Mexicans
+cuban0a         int     %8.0g                 Cubans
+pr0a            int     %8.0g                 Puerto Ricans
+fb0a            int     %8.0g                 Foreign-born
+nat0a           int     %8.0g               * Naturalized Foreign-Born
+n10imm0a        int     %8.0g                 Recent Immigrants (within the past
+                                                10 years)
+ag5up0a         long    %8.0g               * Persons 5 years and Over
+olang0a         int     %8.0g               * Persons who speak language other
+                                                than English at home
+lep0a           int     %8.0g               * Persons who speak English not well
+rufb0a          int     %8.0g                 Persons who were born in Russia/
+                                                USSR
+itfb0a          int     %8.0g                 Persons who were born in Italy
+gefb0a          int     %8.0g                 Persons who were born in Germany
+irfb0a          int     %8.0g                 Persons who were born in Ireland
+scfb0a          int     %8.0g                 Persons who were born in Ireland
+ag15up0a        int     %8.0g                 Persons age 15 years and over
+mar0a           int     %8.0g                 Currently married (excluding
+                                                separated)
+wds0a           int     %8.0g                 Widowed, Divorced, and Separated
+family0a        int     %8.0g                 Total Families
+fhh0a           int     %8.0g                 Female-headed families with
+                                                children
+ag25up0a        int     %8.0g                 Population 25 years and over
+hs0a            int     %8.0g                 Persons with high school degree or
+                                                less
+col0a           int     %8.0g                 Persons with at least a 4 year
+                                                college degree
+clf0a           int     %8.0g                 Civilian labor force 16 years and
+                                                over
+unemp0a         int     %8.0g                 Unemployed
+dflabf0a        int     %8.0g                 Females 16 years and over, except
+                                                in Armed Forces
+flabf0a         int     %8.0g                 Females in labor force
+empclf0a        int     %8.0g                 Employed persons 16 years and over
+prof0a          int     %8.0g                 Professional employees (by
+                                                occupations)
+manuf0a         int     %8.0g                 Manufacturing employees (by
+                                                industries)
+semp0a          int     %8.0g                 Self-employed
+ag18cv0a        int     %8.0g                 Self-employed
+vet0a           int     %8.0g                 Veterans
+hh0a            int     %8.0g                 Total households in sample-based
+                                                data
+hhw0a           int     %8.0g                 Total white households in
+                                                sample-based data
+hhb0a           int     %8.0g                 Total black households in
+                                                sample-based data
+hha0a           int     %8.0g                 Total Asian/Pacific Islander
+                                                households in sample-based data
+hhh0a           int     %8.0g                 Total Hispanic households in
+                                                sample-based data
+hinc0a          long    %12.0g                Median household income
+hincw0a         long    %12.0g                Median household income for whites
+hincb0a         long    %12.0g                Median household income for blacks
+hinch0a         long    %12.0g                Median household income for
+                                                Hispanics
+incpc0a         long    %12.0g                Per capita income
+dpov0a          int     %8.0g                 Persons for whom poverty status is
+                                                determined
+npov0a          int     %8.0g                 Persons in poverty
+n65pov0a        int     %8.0g                 Persons 65 years and older in
+                                                poverty
+dfmpov0a        int     %8.0g                 Families for whom poverty status
+                                                is determined
+nfmpov0a        int     %8.0g                 Families with children in poverty
+dwpov0a         int     %8.0g                 White persons for whom poverty
+                                                status is determined
+nwpov0a         int     %8.0g                 whites in poverty
+dbpov0a         int     %8.0g                 Black persons for whom poverty
+                                                status is determined
+nbpov0a         int     %8.0g                 Blacks in poverty
+dnapov0a        int     %8.0g                 Native American for whom poverty
+                                                status is determined
+nnapov0a        int     %8.0g                 Native Americans in poverty
+dhpov0a         int     %8.0g                 Hispanics for whom poverty status
+                                                is determined
+nhpov0a         int     %8.0g                 Hispanics in poverty
+dapov0a         int     %8.0g                 Asians and Pacific Islanders for
+                                                whom poverty status is
+                                                determined
+napov0a         int     %8.0g                 Asians and Pacific Islanders in
+                                                poverty
+hu0a            int     %8.0g                 Housing Units
+vac0a           int     %8.0g                 Vacant Housing Units
+ohu0a           int     %8.0g                 Occupied Housing Units
+own0a           int     %8.0g                 Owner-occupied housing units
+rent0a          int     %8.0g                 Renter-occupied housing units
+dmulti0a        int     %8.0g               * Housing units
+multi0a         int     %8.0g                 Housing units in multi-unit
+                                                structures
+h30old0a        int     %8.0g                 Structures built more than 30
+                                                years ago
+h10yrs0a        int     %8.0g                 Household heads moved into unit
+                                                less than 10 years ago
+mrent0a         int     %8.0g                 Median monthly contract rent
+mhmval0a        long    %12.0g                Median home value
+a18und0a        int     %8.0g                 Persons age 17 years and under
+a60up0a         int     %8.0g                 Persons age 60 years and over
+a75up0a         int     %8.0g                 Persons age 75 years and over
+agewht0a        int     %8.0g                 White Population with Known Age
+                                                Distribution
+ageblk0a        int     %8.0g                 Black Population with Known Age
+                                                Distribution
+agentv0a        int     %8.0g                 Native American Population with
+                                                Known Age Distribution
+agehsp0a        int     %8.0g                 Hispanic Population with Known Age
+                                                Distribution
+ageasn0a        int     %8.0g                 Asian and Pacific Islander
+                                                Population with Known Age
+                                                Distribution
+a15wht0a        int     %8.0g               * 0-15 years old of White Race
+a15blk0a        int     %8.0g               * 0-15 years old of Black Race
+a15ntv0a        int     %8.0g               * 0-15 years old of Native American
+                                                Race
+a15hsp0a        int     %8.0g               * 0-15 years old of Hispanic Origins
+a15asn0a        int     %8.0g               * 0-15 years old of Asians and
+                                                Pacific Islanders
+a65wht0a        int     %8.0g                 65 Years and Older of Non-Hispanic
+                                                Whites
+a65blk0a        int     %8.0g                 65 Years and Older of Black Race
+a65ntv0a        int     %8.0g                 65 Years and Older of Native
+                                                American Race
+a65hsp0a        int     %8.0g                 65 years and older Persons of
+                                                Hispanic Origins
+a65asn0a        int     %8.0g                 65 Years and Older of Asians and
+                                                Pacific Islanders
+hinca0a         float   %9.0g                 Median household income for Asians
+                                                and Pacific Islanders
+                                            * indicated variables have notes
+--------------------------------------------------------------------------------
+Sorted by: tractid
+     Note: Dataset has changed since last saved.
+
+. quietly log close index
