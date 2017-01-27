@@ -1,0 +1,349 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD02_VD01,Margin of Error; Total:
+HD01_VD02,Estimate; Male:
+HD02_VD02,Margin of Error; Male:
+HD01_VD03,Estimate; Male: - 16 to 19 years:
+HD02_VD03,Margin of Error; Male: - 16 to 19 years:
+HD01_VD04,Estimate; Male: - 16 to 19 years: - In labor force:
+HD02_VD04,Margin of Error; Male: - 16 to 19 years: - In labor force:
+HD01_VD05,Estimate; Male: - 16 to 19 years: - In labor force: - In Armed Forces
+HD02_VD05,Margin of Error; Male: - 16 to 19 years: - In labor force: - In Armed Forces
+HD01_VD06,Estimate; Male: - 16 to 19 years: - In labor force: - Civilian:
+HD02_VD06,Margin of Error; Male: - 16 to 19 years: - In labor force: - Civilian:
+HD01_VD07,Estimate; Male: - 16 to 19 years: - In labor force: - Civilian: - Employed
+HD02_VD07,Margin of Error; Male: - 16 to 19 years: - In labor force: - Civilian: - Employed
+HD01_VD08,Estimate; Male: - 16 to 19 years: - In labor force: - Civilian: - Unemployed
+HD02_VD08,Margin of Error; Male: - 16 to 19 years: - In labor force: - Civilian: - Unemployed
+HD01_VD09,Estimate; Male: - 16 to 19 years: - Not in labor force
+HD02_VD09,Margin of Error; Male: - 16 to 19 years: - Not in labor force
+HD01_VD10,Estimate; Male: - 20 and 21 years:
+HD02_VD10,Margin of Error; Male: - 20 and 21 years:
+HD01_VD11,Estimate; Male: - 20 and 21 years: - In labor force:
+HD02_VD11,Margin of Error; Male: - 20 and 21 years: - In labor force:
+HD01_VD12,Estimate; Male: - 20 and 21 years: - In labor force: - In Armed Forces
+HD02_VD12,Margin of Error; Male: - 20 and 21 years: - In labor force: - In Armed Forces
+HD01_VD13,Estimate; Male: - 20 and 21 years: - In labor force: - Civilian:
+HD02_VD13,Margin of Error; Male: - 20 and 21 years: - In labor force: - Civilian:
+HD01_VD14,Estimate; Male: - 20 and 21 years: - In labor force: - Civilian: - Employed
+HD02_VD14,Margin of Error; Male: - 20 and 21 years: - In labor force: - Civilian: - Employed
+HD01_VD15,Estimate; Male: - 20 and 21 years: - In labor force: - Civilian: - Unemployed
+HD02_VD15,Margin of Error; Male: - 20 and 21 years: - In labor force: - Civilian: - Unemployed
+HD01_VD16,Estimate; Male: - 20 and 21 years: - Not in labor force
+HD02_VD16,Margin of Error; Male: - 20 and 21 years: - Not in labor force
+HD01_VD17,Estimate; Male: - 22 to 24 years:
+HD02_VD17,Margin of Error; Male: - 22 to 24 years:
+HD01_VD18,Estimate; Male: - 22 to 24 years: - In labor force:
+HD02_VD18,Margin of Error; Male: - 22 to 24 years: - In labor force:
+HD01_VD19,Estimate; Male: - 22 to 24 years: - In labor force: - In Armed Forces
+HD02_VD19,Margin of Error; Male: - 22 to 24 years: - In labor force: - In Armed Forces
+HD01_VD20,Estimate; Male: - 22 to 24 years: - In labor force: - Civilian:
+HD02_VD20,Margin of Error; Male: - 22 to 24 years: - In labor force: - Civilian:
+HD01_VD21,Estimate; Male: - 22 to 24 years: - In labor force: - Civilian: - Employed
+HD02_VD21,Margin of Error; Male: - 22 to 24 years: - In labor force: - Civilian: - Employed
+HD01_VD22,Estimate; Male: - 22 to 24 years: - In labor force: - Civilian: - Unemployed
+HD02_VD22,Margin of Error; Male: - 22 to 24 years: - In labor force: - Civilian: - Unemployed
+HD01_VD23,Estimate; Male: - 22 to 24 years: - Not in labor force
+HD02_VD23,Margin of Error; Male: - 22 to 24 years: - Not in labor force
+HD01_VD24,Estimate; Male: - 25 to 29 years:
+HD02_VD24,Margin of Error; Male: - 25 to 29 years:
+HD01_VD25,Estimate; Male: - 25 to 29 years: - In labor force:
+HD02_VD25,Margin of Error; Male: - 25 to 29 years: - In labor force:
+HD01_VD26,Estimate; Male: - 25 to 29 years: - In labor force: - In Armed Forces
+HD02_VD26,Margin of Error; Male: - 25 to 29 years: - In labor force: - In Armed Forces
+HD01_VD27,Estimate; Male: - 25 to 29 years: - In labor force: - Civilian:
+HD02_VD27,Margin of Error; Male: - 25 to 29 years: - In labor force: - Civilian:
+HD01_VD28,Estimate; Male: - 25 to 29 years: - In labor force: - Civilian: - Employed
+HD02_VD28,Margin of Error; Male: - 25 to 29 years: - In labor force: - Civilian: - Employed
+HD01_VD29,Estimate; Male: - 25 to 29 years: - In labor force: - Civilian: - Unemployed
+HD02_VD29,Margin of Error; Male: - 25 to 29 years: - In labor force: - Civilian: - Unemployed
+HD01_VD30,Estimate; Male: - 25 to 29 years: - Not in labor force
+HD02_VD30,Margin of Error; Male: - 25 to 29 years: - Not in labor force
+HD01_VD31,Estimate; Male: - 30 to 34 years:
+HD02_VD31,Margin of Error; Male: - 30 to 34 years:
+HD01_VD32,Estimate; Male: - 30 to 34 years: - In labor force:
+HD02_VD32,Margin of Error; Male: - 30 to 34 years: - In labor force:
+HD01_VD33,Estimate; Male: - 30 to 34 years: - In labor force: - In Armed Forces
+HD02_VD33,Margin of Error; Male: - 30 to 34 years: - In labor force: - In Armed Forces
+HD01_VD34,Estimate; Male: - 30 to 34 years: - In labor force: - Civilian:
+HD02_VD34,Margin of Error; Male: - 30 to 34 years: - In labor force: - Civilian:
+HD01_VD35,Estimate; Male: - 30 to 34 years: - In labor force: - Civilian: - Employed
+HD02_VD35,Margin of Error; Male: - 30 to 34 years: - In labor force: - Civilian: - Employed
+HD01_VD36,Estimate; Male: - 30 to 34 years: - In labor force: - Civilian: - Unemployed
+HD02_VD36,Margin of Error; Male: - 30 to 34 years: - In labor force: - Civilian: - Unemployed
+HD01_VD37,Estimate; Male: - 30 to 34 years: - Not in labor force
+HD02_VD37,Margin of Error; Male: - 30 to 34 years: - Not in labor force
+HD01_VD38,Estimate; Male: - 35 to 44 years:
+HD02_VD38,Margin of Error; Male: - 35 to 44 years:
+HD01_VD39,Estimate; Male: - 35 to 44 years: - In labor force:
+HD02_VD39,Margin of Error; Male: - 35 to 44 years: - In labor force:
+HD01_VD40,Estimate; Male: - 35 to 44 years: - In labor force: - In Armed Forces
+HD02_VD40,Margin of Error; Male: - 35 to 44 years: - In labor force: - In Armed Forces
+HD01_VD41,Estimate; Male: - 35 to 44 years: - In labor force: - Civilian:
+HD02_VD41,Margin of Error; Male: - 35 to 44 years: - In labor force: - Civilian:
+HD01_VD42,Estimate; Male: - 35 to 44 years: - In labor force: - Civilian: - Employed
+HD02_VD42,Margin of Error; Male: - 35 to 44 years: - In labor force: - Civilian: - Employed
+HD01_VD43,Estimate; Male: - 35 to 44 years: - In labor force: - Civilian: - Unemployed
+HD02_VD43,Margin of Error; Male: - 35 to 44 years: - In labor force: - Civilian: - Unemployed
+HD01_VD44,Estimate; Male: - 35 to 44 years: - Not in labor force
+HD02_VD44,Margin of Error; Male: - 35 to 44 years: - Not in labor force
+HD01_VD45,Estimate; Male: - 45 to 54 years:
+HD02_VD45,Margin of Error; Male: - 45 to 54 years:
+HD01_VD46,Estimate; Male: - 45 to 54 years: - In labor force:
+HD02_VD46,Margin of Error; Male: - 45 to 54 years: - In labor force:
+HD01_VD47,Estimate; Male: - 45 to 54 years: - In labor force: - In Armed Forces
+HD02_VD47,Margin of Error; Male: - 45 to 54 years: - In labor force: - In Armed Forces
+HD01_VD48,Estimate; Male: - 45 to 54 years: - In labor force: - Civilian:
+HD02_VD48,Margin of Error; Male: - 45 to 54 years: - In labor force: - Civilian:
+HD01_VD49,Estimate; Male: - 45 to 54 years: - In labor force: - Civilian: - Employed
+HD02_VD49,Margin of Error; Male: - 45 to 54 years: - In labor force: - Civilian: - Employed
+HD01_VD50,Estimate; Male: - 45 to 54 years: - In labor force: - Civilian: - Unemployed
+HD02_VD50,Margin of Error; Male: - 45 to 54 years: - In labor force: - Civilian: - Unemployed
+HD01_VD51,Estimate; Male: - 45 to 54 years: - Not in labor force
+HD02_VD51,Margin of Error; Male: - 45 to 54 years: - Not in labor force
+HD01_VD52,Estimate; Male: - 55 to 59 years:
+HD02_VD52,Margin of Error; Male: - 55 to 59 years:
+HD01_VD53,Estimate; Male: - 55 to 59 years: - In labor force:
+HD02_VD53,Margin of Error; Male: - 55 to 59 years: - In labor force:
+HD01_VD54,Estimate; Male: - 55 to 59 years: - In labor force: - In Armed Forces
+HD02_VD54,Margin of Error; Male: - 55 to 59 years: - In labor force: - In Armed Forces
+HD01_VD55,Estimate; Male: - 55 to 59 years: - In labor force: - Civilian:
+HD02_VD55,Margin of Error; Male: - 55 to 59 years: - In labor force: - Civilian:
+HD01_VD56,Estimate; Male: - 55 to 59 years: - In labor force: - Civilian: - Employed
+HD02_VD56,Margin of Error; Male: - 55 to 59 years: - In labor force: - Civilian: - Employed
+HD01_VD57,Estimate; Male: - 55 to 59 years: - In labor force: - Civilian: - Unemployed
+HD02_VD57,Margin of Error; Male: - 55 to 59 years: - In labor force: - Civilian: - Unemployed
+HD01_VD58,Estimate; Male: - 55 to 59 years: - Not in labor force
+HD02_VD58,Margin of Error; Male: - 55 to 59 years: - Not in labor force
+HD01_VD59,Estimate; Male: - 60 and 61 years:
+HD02_VD59,Margin of Error; Male: - 60 and 61 years:
+HD01_VD60,Estimate; Male: - 60 and 61 years: - In labor force:
+HD02_VD60,Margin of Error; Male: - 60 and 61 years: - In labor force:
+HD01_VD61,Estimate; Male: - 60 and 61 years: - In labor force: - In Armed Forces
+HD02_VD61,Margin of Error; Male: - 60 and 61 years: - In labor force: - In Armed Forces
+HD01_VD62,Estimate; Male: - 60 and 61 years: - In labor force: - Civilian:
+HD02_VD62,Margin of Error; Male: - 60 and 61 years: - In labor force: - Civilian:
+HD01_VD63,Estimate; Male: - 60 and 61 years: - In labor force: - Civilian: - Employed
+HD02_VD63,Margin of Error; Male: - 60 and 61 years: - In labor force: - Civilian: - Employed
+HD01_VD64,Estimate; Male: - 60 and 61 years: - In labor force: - Civilian: - Unemployed
+HD02_VD64,Margin of Error; Male: - 60 and 61 years: - In labor force: - Civilian: - Unemployed
+HD01_VD65,Estimate; Male: - 60 and 61 years: - Not in labor force
+HD02_VD65,Margin of Error; Male: - 60 and 61 years: - Not in labor force
+HD01_VD66,Estimate; Male: - 62 to 64 years:
+HD02_VD66,Margin of Error; Male: - 62 to 64 years:
+HD01_VD67,Estimate; Male: - 62 to 64 years: - In labor force:
+HD02_VD67,Margin of Error; Male: - 62 to 64 years: - In labor force:
+HD01_VD68,Estimate; Male: - 62 to 64 years: - In labor force: - In Armed Forces
+HD02_VD68,Margin of Error; Male: - 62 to 64 years: - In labor force: - In Armed Forces
+HD01_VD69,Estimate; Male: - 62 to 64 years: - In labor force: - Civilian:
+HD02_VD69,Margin of Error; Male: - 62 to 64 years: - In labor force: - Civilian:
+HD01_VD70,Estimate; Male: - 62 to 64 years: - In labor force: - Civilian: - Employed
+HD02_VD70,Margin of Error; Male: - 62 to 64 years: - In labor force: - Civilian: - Employed
+HD01_VD71,Estimate; Male: - 62 to 64 years: - In labor force: - Civilian: - Unemployed
+HD02_VD71,Margin of Error; Male: - 62 to 64 years: - In labor force: - Civilian: - Unemployed
+HD01_VD72,Estimate; Male: - 62 to 64 years: - Not in labor force
+HD02_VD72,Margin of Error; Male: - 62 to 64 years: - Not in labor force
+HD01_VD73,Estimate; Male: - 65 to 69 years:
+HD02_VD73,Margin of Error; Male: - 65 to 69 years:
+HD01_VD74,Estimate; Male: - 65 to 69 years: - In labor force:
+HD02_VD74,Margin of Error; Male: - 65 to 69 years: - In labor force:
+HD01_VD76,Estimate; Male: - 65 to 69 years: - In labor force: - Employed
+HD02_VD76,Margin of Error; Male: - 65 to 69 years: - In labor force: - Employed
+HD01_VD77,Estimate; Male: - 65 to 69 years: - In labor force: - Unemployed
+HD02_VD77,Margin of Error; Male: - 65 to 69 years: - In labor force: - Unemployed
+HD01_VD78,Estimate; Male: - 65 to 69 years: - Not in labor force
+HD02_VD78,Margin of Error; Male: - 65 to 69 years: - Not in labor force
+HD01_VD79,Estimate; Male: - 70 to 74 years:
+HD02_VD79,Margin of Error; Male: - 70 to 74 years:
+HD01_VD80,Estimate; Male: - 70 to 74 years: - In labor force:
+HD02_VD80,Margin of Error; Male: - 70 to 74 years: - In labor force:
+HD01_VD82,Estimate; Male: - 70 to 74 years: - In labor force: - Employed
+HD02_VD82,Margin of Error; Male: - 70 to 74 years: - In labor force: - Employed
+HD01_VD83,Estimate; Male: - 70 to 74 years: - In labor force: - Unemployed
+HD02_VD83,Margin of Error; Male: - 70 to 74 years: - In labor force: - Unemployed
+HD01_VD84,Estimate; Male: - 70 to 74 years: - Not in labor force
+HD02_VD84,Margin of Error; Male: - 70 to 74 years: - Not in labor force
+HD01_VD85,Estimate; Male: - 75 years and over:
+HD02_VD85,Margin of Error; Male: - 75 years and over:
+HD01_VD86,Estimate; Male: - 75 years and over: - In labor force:
+HD02_VD86,Margin of Error; Male: - 75 years and over: - In labor force:
+HD01_VD88,Estimate; Male: - 75 years and over: - In labor force: - Employed
+HD02_VD88,Margin of Error; Male: - 75 years and over: - In labor force: - Employed
+HD01_VD89,Estimate; Male: - 75 years and over: - In labor force: - Unemployed
+HD02_VD89,Margin of Error; Male: - 75 years and over: - In labor force: - Unemployed
+HD01_VD90,Estimate; Male: - 75 years and over: - Not in labor force
+HD02_VD90,Margin of Error; Male: - 75 years and over: - Not in labor force
+HD01_VD91,Estimate; Female:
+HD02_VD91,Margin of Error; Female:
+HD01_VD92,Estimate; Female: - 16 to 19 years:
+HD02_VD92,Margin of Error; Female: - 16 to 19 years:
+HD01_VD93,Estimate; Female: - 16 to 19 years: - In labor force:
+HD02_VD93,Margin of Error; Female: - 16 to 19 years: - In labor force:
+HD01_VD94,Estimate; Female: - 16 to 19 years: - In labor force: - In Armed Forces
+HD02_VD94,Margin of Error; Female: - 16 to 19 years: - In labor force: - In Armed Forces
+HD01_VD95,Estimate; Female: - 16 to 19 years: - In labor force: - Civilian:
+HD02_VD95,Margin of Error; Female: - 16 to 19 years: - In labor force: - Civilian:
+HD01_VD96,Estimate; Female: - 16 to 19 years: - In labor force: - Civilian: - Employed
+HD02_VD96,Margin of Error; Female: - 16 to 19 years: - In labor force: - Civilian: - Employed
+HD01_VD97,Estimate; Female: - 16 to 19 years: - In labor force: - Civilian: - Unemployed
+HD02_VD97,Margin of Error; Female: - 16 to 19 years: - In labor force: - Civilian: - Unemployed
+HD01_VD98,Estimate; Female: - 16 to 19 years: - Not in labor force
+HD02_VD98,Margin of Error; Female: - 16 to 19 years: - Not in labor force
+HD01_VD99,Estimate; Female: - 20 and 21 years:
+HD02_VD99,Margin of Error; Female: - 20 and 21 years:
+HD01_VD100,Estimate; Female: - 20 and 21 years: - In labor force:
+HD02_VD100,Margin of Error; Female: - 20 and 21 years: - In labor force:
+HD01_VD101,Estimate; Female: - 20 and 21 years: - In labor force: - In Armed Forces
+HD02_VD101,Margin of Error; Female: - 20 and 21 years: - In labor force: - In Armed Forces
+HD01_VD102,Estimate; Female: - 20 and 21 years: - In labor force: - Civilian:
+HD02_VD102,Margin of Error; Female: - 20 and 21 years: - In labor force: - Civilian:
+HD01_VD103,Estimate; Female: - 20 and 21 years: - In labor force: - Civilian: - Employed
+HD02_VD103,Margin of Error; Female: - 20 and 21 years: - In labor force: - Civilian: - Employed
+HD01_VD104,Estimate; Female: - 20 and 21 years: - In labor force: - Civilian: - Unemployed
+HD02_VD104,Margin of Error; Female: - 20 and 21 years: - In labor force: - Civilian: - Unemployed
+HD01_VD105,Estimate; Female: - 20 and 21 years: - Not in labor force
+HD02_VD105,Margin of Error; Female: - 20 and 21 years: - Not in labor force
+HD01_VD106,Estimate; Female: - 22 to 24 years:
+HD02_VD106,Margin of Error; Female: - 22 to 24 years:
+HD01_VD107,Estimate; Female: - 22 to 24 years: - In labor force:
+HD02_VD107,Margin of Error; Female: - 22 to 24 years: - In labor force:
+HD01_VD108,Estimate; Female: - 22 to 24 years: - In labor force: - In Armed Forces
+HD02_VD108,Margin of Error; Female: - 22 to 24 years: - In labor force: - In Armed Forces
+HD01_VD109,Estimate; Female: - 22 to 24 years: - In labor force: - Civilian:
+HD02_VD109,Margin of Error; Female: - 22 to 24 years: - In labor force: - Civilian:
+HD01_VD110,Estimate; Female: - 22 to 24 years: - In labor force: - Civilian: - Employed
+HD02_VD110,Margin of Error; Female: - 22 to 24 years: - In labor force: - Civilian: - Employed
+HD01_VD111,Estimate; Female: - 22 to 24 years: - In labor force: - Civilian: - Unemployed
+HD02_VD111,Margin of Error; Female: - 22 to 24 years: - In labor force: - Civilian: - Unemployed
+HD01_VD112,Estimate; Female: - 22 to 24 years: - Not in labor force
+HD02_VD112,Margin of Error; Female: - 22 to 24 years: - Not in labor force
+HD01_VD113,Estimate; Female: - 25 to 29 years:
+HD02_VD113,Margin of Error; Female: - 25 to 29 years:
+HD01_VD114,Estimate; Female: - 25 to 29 years: - In labor force:
+HD02_VD114,Margin of Error; Female: - 25 to 29 years: - In labor force:
+HD01_VD115,Estimate; Female: - 25 to 29 years: - In labor force: - In Armed Forces
+HD02_VD115,Margin of Error; Female: - 25 to 29 years: - In labor force: - In Armed Forces
+HD01_VD116,Estimate; Female: - 25 to 29 years: - In labor force: - Civilian:
+HD02_VD116,Margin of Error; Female: - 25 to 29 years: - In labor force: - Civilian:
+HD01_VD117,Estimate; Female: - 25 to 29 years: - In labor force: - Civilian: - Employed
+HD02_VD117,Margin of Error; Female: - 25 to 29 years: - In labor force: - Civilian: - Employed
+HD01_VD118,Estimate; Female: - 25 to 29 years: - In labor force: - Civilian: - Unemployed
+HD02_VD118,Margin of Error; Female: - 25 to 29 years: - In labor force: - Civilian: - Unemployed
+HD01_VD119,Estimate; Female: - 25 to 29 years: - Not in labor force
+HD02_VD119,Margin of Error; Female: - 25 to 29 years: - Not in labor force
+HD01_VD120,Estimate; Female: - 30 to 34 years:
+HD02_VD120,Margin of Error; Female: - 30 to 34 years:
+HD01_VD121,Estimate; Female: - 30 to 34 years: - In labor force:
+HD02_VD121,Margin of Error; Female: - 30 to 34 years: - In labor force:
+HD01_VD122,Estimate; Female: - 30 to 34 years: - In labor force: - In Armed Forces
+HD02_VD122,Margin of Error; Female: - 30 to 34 years: - In labor force: - In Armed Forces
+HD01_VD123,Estimate; Female: - 30 to 34 years: - In labor force: - Civilian:
+HD02_VD123,Margin of Error; Female: - 30 to 34 years: - In labor force: - Civilian:
+HD01_VD124,Estimate; Female: - 30 to 34 years: - In labor force: - Civilian: - Employed
+HD02_VD124,Margin of Error; Female: - 30 to 34 years: - In labor force: - Civilian: - Employed
+HD01_VD125,Estimate; Female: - 30 to 34 years: - In labor force: - Civilian: - Unemployed
+HD02_VD125,Margin of Error; Female: - 30 to 34 years: - In labor force: - Civilian: - Unemployed
+HD01_VD126,Estimate; Female: - 30 to 34 years: - Not in labor force
+HD02_VD126,Margin of Error; Female: - 30 to 34 years: - Not in labor force
+HD01_VD127,Estimate; Female: - 35 to 44 years:
+HD02_VD127,Margin of Error; Female: - 35 to 44 years:
+HD01_VD128,Estimate; Female: - 35 to 44 years: - In labor force:
+HD02_VD128,Margin of Error; Female: - 35 to 44 years: - In labor force:
+HD01_VD129,Estimate; Female: - 35 to 44 years: - In labor force: - In Armed Forces
+HD02_VD129,Margin of Error; Female: - 35 to 44 years: - In labor force: - In Armed Forces
+HD01_VD130,Estimate; Female: - 35 to 44 years: - In labor force: - Civilian:
+HD02_VD130,Margin of Error; Female: - 35 to 44 years: - In labor force: - Civilian:
+HD01_VD131,Estimate; Female: - 35 to 44 years: - In labor force: - Civilian: - Employed
+HD02_VD131,Margin of Error; Female: - 35 to 44 years: - In labor force: - Civilian: - Employed
+HD01_VD132,Estimate; Female: - 35 to 44 years: - In labor force: - Civilian: - Unemployed
+HD02_VD132,Margin of Error; Female: - 35 to 44 years: - In labor force: - Civilian: - Unemployed
+HD01_VD133,Estimate; Female: - 35 to 44 years: - Not in labor force
+HD02_VD133,Margin of Error; Female: - 35 to 44 years: - Not in labor force
+HD01_VD134,Estimate; Female: - 45 to 54 years:
+HD02_VD134,Margin of Error; Female: - 45 to 54 years:
+HD01_VD135,Estimate; Female: - 45 to 54 years: - In labor force:
+HD02_VD135,Margin of Error; Female: - 45 to 54 years: - In labor force:
+HD01_VD136,Estimate; Female: - 45 to 54 years: - In labor force: - In Armed Forces
+HD02_VD136,Margin of Error; Female: - 45 to 54 years: - In labor force: - In Armed Forces
+HD01_VD137,Estimate; Female: - 45 to 54 years: - In labor force: - Civilian:
+HD02_VD137,Margin of Error; Female: - 45 to 54 years: - In labor force: - Civilian:
+HD01_VD138,Estimate; Female: - 45 to 54 years: - In labor force: - Civilian: - Employed
+HD02_VD138,Margin of Error; Female: - 45 to 54 years: - In labor force: - Civilian: - Employed
+HD01_VD139,Estimate; Female: - 45 to 54 years: - In labor force: - Civilian: - Unemployed
+HD02_VD139,Margin of Error; Female: - 45 to 54 years: - In labor force: - Civilian: - Unemployed
+HD01_VD140,Estimate; Female: - 45 to 54 years: - Not in labor force
+HD02_VD140,Margin of Error; Female: - 45 to 54 years: - Not in labor force
+HD01_VD141,Estimate; Female: - 55 to 59 years:
+HD02_VD141,Margin of Error; Female: - 55 to 59 years:
+HD01_VD142,Estimate; Female: - 55 to 59 years: - In labor force:
+HD02_VD142,Margin of Error; Female: - 55 to 59 years: - In labor force:
+HD01_VD143,Estimate; Female: - 55 to 59 years: - In labor force: - In Armed Forces
+HD02_VD143,Margin of Error; Female: - 55 to 59 years: - In labor force: - In Armed Forces
+HD01_VD144,Estimate; Female: - 55 to 59 years: - In labor force: - Civilian:
+HD02_VD144,Margin of Error; Female: - 55 to 59 years: - In labor force: - Civilian:
+HD01_VD145,Estimate; Female: - 55 to 59 years: - In labor force: - Civilian: - Employed
+HD02_VD145,Margin of Error; Female: - 55 to 59 years: - In labor force: - Civilian: - Employed
+HD01_VD146,Estimate; Female: - 55 to 59 years: - In labor force: - Civilian: - Unemployed
+HD02_VD146,Margin of Error; Female: - 55 to 59 years: - In labor force: - Civilian: - Unemployed
+HD01_VD147,Estimate; Female: - 55 to 59 years: - Not in labor force
+HD02_VD147,Margin of Error; Female: - 55 to 59 years: - Not in labor force
+HD01_VD148,Estimate; Female: - 60 and 61 years:
+HD02_VD148,Margin of Error; Female: - 60 and 61 years:
+HD01_VD149,Estimate; Female: - 60 and 61 years: - In labor force:
+HD02_VD149,Margin of Error; Female: - 60 and 61 years: - In labor force:
+HD01_VD150,Estimate; Female: - 60 and 61 years: - In labor force: - In Armed Forces
+HD02_VD150,Margin of Error; Female: - 60 and 61 years: - In labor force: - In Armed Forces
+HD01_VD151,Estimate; Female: - 60 and 61 years: - In labor force: - Civilian:
+HD02_VD151,Margin of Error; Female: - 60 and 61 years: - In labor force: - Civilian:
+HD01_VD152,Estimate; Female: - 60 and 61 years: - In labor force: - Civilian: - Employed
+HD02_VD152,Margin of Error; Female: - 60 and 61 years: - In labor force: - Civilian: - Employed
+HD01_VD153,Estimate; Female: - 60 and 61 years: - In labor force: - Civilian: - Unemployed
+HD02_VD153,Margin of Error; Female: - 60 and 61 years: - In labor force: - Civilian: - Unemployed
+HD01_VD154,Estimate; Female: - 60 and 61 years: - Not in labor force
+HD02_VD154,Margin of Error; Female: - 60 and 61 years: - Not in labor force
+HD01_VD155,Estimate; Female: - 62 to 64 years:
+HD02_VD155,Margin of Error; Female: - 62 to 64 years:
+HD01_VD156,Estimate; Female: - 62 to 64 years: - In labor force:
+HD02_VD156,Margin of Error; Female: - 62 to 64 years: - In labor force:
+HD01_VD157,Estimate; Female: - 62 to 64 years: - In labor force: - In Armed Forces
+HD02_VD157,Margin of Error; Female: - 62 to 64 years: - In labor force: - In Armed Forces
+HD01_VD158,Estimate; Female: - 62 to 64 years: - In labor force: - Civilian:
+HD02_VD158,Margin of Error; Female: - 62 to 64 years: - In labor force: - Civilian:
+HD01_VD159,Estimate; Female: - 62 to 64 years: - In labor force: - Civilian: - Employed
+HD02_VD159,Margin of Error; Female: - 62 to 64 years: - In labor force: - Civilian: - Employed
+HD01_VD160,Estimate; Female: - 62 to 64 years: - In labor force: - Civilian: - Unemployed
+HD02_VD160,Margin of Error; Female: - 62 to 64 years: - In labor force: - Civilian: - Unemployed
+HD01_VD161,Estimate; Female: - 62 to 64 years: - Not in labor force
+HD02_VD161,Margin of Error; Female: - 62 to 64 years: - Not in labor force
+HD01_VD162,Estimate; Female: - 65 to 69 years:
+HD02_VD162,Margin of Error; Female: - 65 to 69 years:
+HD01_VD163,Estimate; Female: - 65 to 69 years: - In labor force:
+HD02_VD163,Margin of Error; Female: - 65 to 69 years: - In labor force:
+HD01_VD165,Estimate; Female: - 65 to 69 years: - In labor force: - Employed
+HD02_VD165,Margin of Error; Female: - 65 to 69 years: - In labor force: - Employed
+HD01_VD166,Estimate; Female: - 65 to 69 years: - In labor force: - Unemployed
+HD02_VD166,Margin of Error; Female: - 65 to 69 years: - In labor force: - Unemployed
+HD01_VD167,Estimate; Female: - 65 to 69 years: - Not in labor force
+HD02_VD167,Margin of Error; Female: - 65 to 69 years: - Not in labor force
+HD01_VD168,Estimate; Female: - 70 to 74 years:
+HD02_VD168,Margin of Error; Female: - 70 to 74 years:
+HD01_VD169,Estimate; Female: - 70 to 74 years: - In labor force:
+HD02_VD169,Margin of Error; Female: - 70 to 74 years: - In labor force:
+HD01_VD171,Estimate; Female: - 70 to 74 years: - In labor force: - Employed
+HD02_VD171,Margin of Error; Female: - 70 to 74 years: - In labor force: - Employed
+HD01_VD172,Estimate; Female: - 70 to 74 years: - In labor force: - Unemployed
+HD02_VD172,Margin of Error; Female: - 70 to 74 years: - In labor force: - Unemployed
+HD01_VD173,Estimate; Female: - 70 to 74 years: - Not in labor force
+HD02_VD173,Margin of Error; Female: - 70 to 74 years: - Not in labor force
+HD01_VD174,Estimate; Female: - 75 years and over:
+HD02_VD174,Margin of Error; Female: - 75 years and over:
+HD01_VD175,Estimate; Female: - 75 years and over: - In labor force:
+HD02_VD175,Margin of Error; Female: - 75 years and over: - In labor force:
+HD01_VD177,Estimate; Female: - 75 years and over: - In labor force: - Employed
+HD02_VD177,Margin of Error; Female: - 75 years and over: - In labor force: - Employed
+HD01_VD178,Estimate; Female: - 75 years and over: - In labor force: - Unemployed
+HD02_VD178,Margin of Error; Female: - 75 years and over: - In labor force: - Unemployed
+HD01_VD179,Estimate; Female: - 75 years and over: - Not in labor force
+HD02_VD179,Margin of Error; Female: - 75 years and over: - Not in labor force

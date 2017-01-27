@@ -1,0 +1,4 @@
+GEO.id,GEO.id2,GEO.display-label,HD01_VD01,HD02_VD01
+Id,Id2,Geography,Estimate; Median value (dollars),Margin of Error; Median value (dollars)
+1400000US29510118400,29510118400,"Census Tract 1184, St. Louis city, Missouri",$-,$**
+1400000US29510119300,29510119300,"Census Tract 1193, St. Louis city, Missouri",$-,$**
