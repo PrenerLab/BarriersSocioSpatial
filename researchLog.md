@@ -64,6 +64,10 @@ Working under the variable-labels branch edits were made to the data do-file. Ed
 
 ### 26 Jan 2017 - Jes
 
-From the master branch files from the working directory were moved to the posted directory for organizational purposes. After this the codebook was used to find the ID's for the variables that have been identified above for the spatial analysis. By finding the variable ID's it was easier to search for the variable tables from American Fact Finder. The tables downloaded were from the ACS 2015 5 year estimates. After downloading these tables, a new branch was created named 2015-ACS-5yr. Under this branch the downloaded tables were added to Github in there original .csv file state.
+From the master branch files from the working directory were moved to the posted directory for organizational purposes. After this the codebook was used to find the ID's for the variables that have been identified above for the spatial analysis. By finding the variable ID's it was easier to search for the variable tables from American Fact Finder. The tables downloaded were from the ACS 2015 5 year estimates. After downloading these tables, a new branch was created named `2015-ACS-5yr`. Under this branch the downloaded tables were added to Github in there original .csv file state.
+
+### 29 Jan 2017 - Jes
+
+Working under the `2015-ACS-5yr` branch a do-file was created. This do-file pulls the .csv files from the `missingVariables` folder and imports them into stata. This works using a loop that pulls each file individually, imports the file into stata and saves the file as a .dta file in the `stataFiles` folder. Next steps include renaming the variables intuitive variable names, labeling them, saving the files, and then merging each seperate variable file into one dataset. This dataset will then be merged into the `stlCity40Census.dta` file. 
 
  >> > > > > > origin/master
