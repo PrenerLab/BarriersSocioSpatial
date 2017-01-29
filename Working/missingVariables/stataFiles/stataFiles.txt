@@ -1,0 +1,203 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/missing
+> Variables/stataFiles/stataFiles.txt
+  log type:  text
+ opened on:  28 Jan 2017, 21:18:08
+
+. 
+. // ==========================================================================
+. 
+. /*
+> file name - convert.do
+> 
+> project name - Barriers Socio-Spatial
+> 
+> purpose - This do-file converts the .csv missing ACS data files to .dta files.
+> 
+> created - January 28, 2017
+> 
+> updated - January 28, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do-file converts the missing variable .csv files to stata .dta files. 
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - ACS_10_5YR_B25001.csv
+> - ACS_15_5YR_B01003.csv
+> - ACS_15_5YR_B03002.csv
+> - ACS_15_5YR_B17001.csv
+> - ACS_15_5YR_B17010.csv
+> - ACS_15_5YR_B17020B.csv
+> - ACS_15_5YR_B17020H.csv
+> - ACS_15_5YR_B19013.csv
+> - ACS_15_5YR_B19013B.csv
+> - ACS_15_5YR_B19013H.csv
+> - ACS_15_5YR_B19301.csv
+> - ACS_15_5YR_B23001.csv
+> - ACS_15_5YR_B25001.csv
+> - ACS_15_5YR_B25002.csv
+> - ACS_15_5YR_B25003.csv
+> - ACS_15_5YR_B25003A.csv
+> - ACS_15_5YR_B25003B.csv
+> - ACS_15_5YR_B25034.csv
+> - ACS_15_5YR_B25058.csv
+> - ACS_15_5YR_B25077.csv
+> */
+. 
+. /*
+> subordinates -
+> - ACS_10_5YR_B25001.dta
+> - ACS_15_5YR_B01003.dta
+> - ACS_15_5YR_B03002.dta
+> - ACS_15_5YR_B17001.dta
+> - ACS_15_5YR_B17010.dta
+> - ACS_15_5YR_B17020B.dta
+> - ACS_15_5YR_B17020H.dta
+> - ACS_15_5YR_B19013.dta
+> - ACS_15_5YR_B19013B.dta
+> - ACS_15_5YR_B19013H.dta
+> - ACS_15_5YR_B19301.dta
+> - ACS_15_5YR_B23001.dta
+> - ACS_15_5YR_B25001.dta
+> - ACS_15_5YR_B25002.dta
+> - ACS_15_5YR_B25003.dta
+> - ACS_15_5YR_B25003A.dta
+> - ACS_15_5YR_B25003B.dta
+> - ACS_15_5YR_B25034.dta
+> - ACS_15_5YR_B25058.dta
+> - ACS_15_5YR_B25077.dta
+> */
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. 
+. local dataPath "/Users/`c(username)'/Github Desktop/BarriersSocioSpatial/Worki
+> ng/missingVariables"
+
+. local files "ACS_10_5YR_B25001.csv ACS_15_5YR_B01003.csv ACS_15_5YR_B03002.csv
+>  ACS_15_5YR_B17001.csv ACS_15_5YR_B17010.csv ACS_15_5YR_B17020B.csv ACS_15_5YR
+> _B17020H.csv ACS_15_5YR_B19013.csv ACS_15_5YR_B19013B.csv ACS_15_5YR_B19013H.c
+> sv ACS_15_5YR_B19301.csv ACS_15_5YR_B23001.csv ACS_15_5YR_B25001.csv ACS_15_5Y
+> R_B25002.csv ACS_15_5YR_B25003.csv ACS_15_5YR_B25003A.csv ACS_15_5YR_B25003B.c
+> sv ACS_15_5YR_B25034.csv ACS_15_5YR_B25058.csv ACS_15_5YR_B25077.csv"
+
+. local newNames "ACS_10_5YR_B25001.dta ACS_15_5YR_B01003.dta ACS_15_5YR_B03002.
+> dta ACS_15_5YR_B17001.dta ACS_15_5YR_B17010.dta ACS_15_5YR_B17020B.dta ACS_15_
+> 5YR_B17020H.dta ACS_15_5YR_B19013.dta ACS_15_5YR_B19013B.dta ACS_15_5YR_B19013
+> H.dta ACS_15_5YR_B19301.dta ACS_15_5YR_B23001.dta ACS_15_5YR_B25001.dta ACS_15
+> _5YR_B25002.dta ACS_15_5YR_B25003.dta ACS_15_5YR_B25003A.dta ACS_15_5YR_B25003
+> B.dta ACS_15_5YR_B25034.dta ACS_15_5YR_B25058.dta ACS_15_5YR_B25077.dta"
+
+. local i=1
+
+. foreach dataFile in `files' {
+  2.   local newData: word `i' of `newNames'
+  3.   import delimited "`dataPath'/`dataFile'", varnames(1)
+  4.   save "$projName/`newData'", replace
+  5.   clear
+  6.   local i=`i'+1
+  7. }
+(5 vars, 106 obs)
+(note: file stataFiles/ACS_10_5YR_B25001.dta not found)
+file stataFiles/ACS_10_5YR_B25001.dta saved
+(5 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B01003.dta not found)
+file stataFiles/ACS_15_5YR_B01003.dta saved
+(45 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B03002.dta not found)
+file stataFiles/ACS_15_5YR_B03002.dta saved
+(121 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B17001.dta not found)
+file stataFiles/ACS_15_5YR_B17001.dta saved
+(85 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B17010.dta not found)
+file stataFiles/ACS_15_5YR_B17010.dta saved
+(37 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B17020B.dta not found)
+file stataFiles/ACS_15_5YR_B17020B.dta saved
+(37 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B17020H.dta not found)
+file stataFiles/ACS_15_5YR_B17020H.dta saved
+(5 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B19013.dta not found)
+file stataFiles/ACS_15_5YR_B19013.dta saved
+(5 vars, 98 obs)
+(note: file stataFiles/ACS_15_5YR_B19013B.dta not found)
+file stataFiles/ACS_15_5YR_B19013B.dta saved
+(5 vars, 100 obs)
+(note: file stataFiles/ACS_15_5YR_B19013H.dta not found)
+file stataFiles/ACS_15_5YR_B19013H.dta saved
+(5 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B19301.dta not found)
+file stataFiles/ACS_15_5YR_B19301.dta saved
+(349 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B23001.dta not found)
+file stataFiles/ACS_15_5YR_B23001.dta saved
+(5 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B25001.dta not found)
+file stataFiles/ACS_15_5YR_B25001.dta saved
+(9 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B25002.dta not found)
+file stataFiles/ACS_15_5YR_B25002.dta saved
+(9 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B25003.dta not found)
+file stataFiles/ACS_15_5YR_B25003.dta saved
+(9 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B25003A.dta not found)
+file stataFiles/ACS_15_5YR_B25003A.dta saved
+(9 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B25003B.dta not found)
+file stataFiles/ACS_15_5YR_B25003B.dta saved
+(25 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B25034.dta not found)
+file stataFiles/ACS_15_5YR_B25034.dta saved
+(5 vars, 105 obs)
+(note: file stataFiles/ACS_15_5YR_B25058.dta not found)
+file stataFiles/ACS_15_5YR_B25058.dta saved
+(5 vars, 105 obs)
+(note: file stataFiles/ACS_15_5YR_B25077.dta not found)
+file stataFiles/ACS_15_5YR_B25077.dta saved
+
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // copy code to code archive
+. 
+. copy "convertMissing.do" "$projName/CodeArchive/convertMissing.do", replace
+(note: file stataFiles/CodeArchive/convertMissing.do not found)
+
+. 
+. 
+. // ==========================================================================
+. 
+. // standard closing options
+. 
+. log close _all
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/missing
+> Variables/stataFiles/stataFiles.txt
+  log type:  text
+ closed on:  28 Jan 2017, 21:18:08
+--------------------------------------------------------------------------------

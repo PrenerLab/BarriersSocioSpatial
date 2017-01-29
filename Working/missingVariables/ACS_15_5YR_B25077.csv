@@ -1,5 +1,4 @@
 GEO.id,GEO.id2,GEO.display-label,HD01_VD01,HD02_VD01
-Id,Id2,Geography,Estimate; Median value (dollars),Margin of Error; Median value (dollars)
 1400000US29510101100,29510101100,"Census Tract 1011, St. Louis city, Missouri",108700,3819
 1400000US29510101200,29510101200,"Census Tract 1012, St. Louis city, Missouri",138200,7420
 1400000US29510101300,29510101300,"Census Tract 1013, St. Louis city, Missouri",135200,15203

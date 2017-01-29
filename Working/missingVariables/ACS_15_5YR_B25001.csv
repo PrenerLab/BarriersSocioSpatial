@@ -1,5 +1,4 @@
 GEO.id,GEO.id2,GEO.display-label,HD01_VD01,HD02_VD01
-Id,Id2,Geography,Estimate; Total,Margin of Error; Total
 1400000US29510101100,29510101100,"Census Tract 1011, St. Louis city, Missouri",1179,73
 1400000US29510101200,29510101200,"Census Tract 1012, St. Louis city, Missouri",1487,108
 1400000US29510101300,29510101300,"Census Tract 1013, St. Louis city, Missouri",2210,50
