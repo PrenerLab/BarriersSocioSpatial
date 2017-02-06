@@ -1,0 +1,148 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acsVari
+> ableRename2015/povertyStatusBlacks.txt
+  log type:  text
+ opened on:   6 Feb 2017, 15:55:35
+
+. 
+. // start MarkDoc log
+. quietly log using "$projName/$markDown-markdoc.smcl", replace smcl name(markdo
+> c)
+
+. 
+. // ==========================================================================
+. 
+. /*
+> file name - B17020B.do
+> 
+> project name - Poverty Status Blacks
+> 
+> purpose - Labels variables from the 2015 ACS
+> 
+> created - Febuary 7, 2017
+> 
+> updated - Febuary 7, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do file renames the 2015 acs Variables.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - ACS_15_5YR_B17020B.dta
+> */
+. 
+. /*
+> subordinates -
+> - data.do
+> - analysis.do
+> */
+. 
+. // ==========================================================================
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. use "$projName/povertyStatusBlacks.dta"
+
+. drop geoid
+
+. /***
+> Drops variable from set for later merge.
+> ***/
+. 
+. rename geoid2 tractid
+
+. label variable tractid "TRTID10"
+
+. /***
+> Renames and labels variable to match variable name for later merge
+> ***/
+. 
+. rename hd01_vd01 nbpov15a
+
+. rename hd02_vd01 nbpov15aME
+
+. /***
+> Renames variables to match variables from previous census datasets for later m
+> erge.
+> ***/
+. 
+. label variable nbpov15a "Blacks in Poverty"
+
+. label variable nbpov15aME "Blacks in Poverty Margin of Error"
+
+. /***
+> Labels variable from set to match.
+> ***/
+. 
+. 
+. 
+. keep tractid geodisplaylabel nbpov15a nbpov15aME
+
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+
+. // convert MarkDoc log to Markdown
+. markdoc "$projName/$markDown-markdoc", replace export(md) install
+
+
+Warning
+your documentation has a width of 85, while your Stata has linesize of 80. 
+markdoc automatically adjusts your document width. You can avoid this warning by
+increasing Stata's linesize or by writing shorter lines
+
+
+(MarkDoc created acsVariableRename2015/povertyStatusBlacks-markdoc.md)
+
+
+. 
+. // save altered data
+. save "$projName/$newData", replace
+file acsVariableRename2015/povertyStatusBlacks.dta saved
+
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // copy code to code archive
+. 
+. copy "B17020B.do" "$projName/CodeArchive/B17020B.do", replace
+
+. 
+. 
+. // ==========================================================================
+. 
+. // standard closing options
+. 
+. log close _all
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acsVari
+> ableRename2015/povertyStatusBlacks.txt
+  log type:  text
+ closed on:   6 Feb 2017, 15:55:36
+--------------------------------------------------------------------------------

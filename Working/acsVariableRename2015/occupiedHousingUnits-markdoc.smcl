@@ -1,0 +1,104 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. // ==========================================================================
+. 
+. /*
+> file name - B25003.do
+> 
+> project name - Occupied Housing Units
+> 
+> purpose - Labels variables from the 2015 ACS
+> 
+> created - Febuary 7, 2017
+> 
+> updated - Febuary 7, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do file renames the 2015 acs Variables.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - ACS_15_5YR_B25003.dta
+> */
+. 
+. /*
+> subordinates -
+> 
+> */
+. 
+. // ==========================================================================
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. use "$projName/occupiedHousingUnits.dta"
+{txt}
+{com}. drop geoid
+{txt}
+{com}. /***
+> Drops variable from set for later merge.
+> ***/
+. 
+. rename geoid2 tractid
+{res}{txt}
+{com}. label variable tractid "TRTID10"
+{txt}
+{com}. /***
+> Renames and labels variable to match variable name for later merge
+> ***/
+. 
+. rename hd01_vd02 own15a
+{res}{txt}
+{com}. rename hd02_vd02 own15aME
+{res}{txt}
+{com}. rename hd01_vd03 rent15a
+{res}{txt}
+{com}. rename hd02_vd03 rent15aME
+{res}{txt}
+{com}. /***
+> Renames variables to match variables from previous census datasets for later merge.
+> ***/
+. 
+. label variable own15a "Owner Occupied Housing Units"
+{txt}
+{com}. label variable own15aME "Owner Occupied Housing Units Margin of Error"
+{txt}
+{com}. label variable rent15a "Renter Occupied Housing Units"
+{txt}
+{com}. label variable rent15aME "Renter Occupied Housing Units Margin of Error"
+{txt}
+{com}. /***
+> Labels variable from set to match.
+> ***/
+. 
+. 
+. 
+. 
+. keep tractid geodisplaylabel own15a own15aME rent15a rent15aME
+{txt}
+{com}. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+{smcl}
+{com}{sf}{ul off}

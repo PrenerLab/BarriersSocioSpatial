@@ -1,0 +1,110 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. // ==========================================================================
+. 
+. /*
+> file name - B03002.do
+> 
+> project name - Total Population
+> 
+> purpose - Labels variables from the 2015 ACS
+> 
+> created - Febuary 7, 2017
+> 
+> updated - Febuary 7, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do file renames the total population variable.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - ACS_15_5YR_B03002.dta
+> */
+. 
+. /*
+> subordinates -
+> - data.do
+> - analysis.do
+> */
+. 
+. // ==========================================================================
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. use "$projName/totalPopulation.dta"
+{txt}
+{com}. drop geoid
+{txt}
+{com}. /***
+> Drops variable from set for later merge.
+> ***/
+. 
+. rename geoid2 tractid
+{res}{txt}
+{com}. label variable tractid "TRTID10"
+{txt}
+{com}. /***
+> Renames and labels variable to match variable name for later merge
+> ***/
+. 
+. rename hd01_vd01 pop15a
+{res}{txt}
+{com}. rename hd02_vd01 pop15aME
+{res}{txt}
+{com}. /***
+> Renames variables to match variables from previous census datasets for later merge.
+> ***/
+. 
+. label variable pop15a "Total Population"
+{txt}
+{com}. label variable pop15aME "Total Population Margin of Error"
+{txt}
+{com}. /***
+> Labels variable from set to match.
+> ***/
+. 
+. rename hd01_vd03 nhwht15a
+{res}{txt}
+{com}. rename hd02_vd03 nhwht15aME
+{res}{txt}
+{com}. label variable nhwht15a "Persons of White Race, Not Hispanic"
+{txt}
+{com}. label variable nhwht15aME "Persons of White Race, Not Hispanic Margin of Error"
+{txt}
+{com}. 
+. rename hd01_vd04 nhblk15a
+{res}{txt}
+{com}. rename hd02_vd04 nhblk15aME
+{res}{txt}
+{com}. label variable nhblk15a "Persons of Black Race, Not Hispanic"
+{txt}
+{com}. label variable nhblk15aME "Persons of Black Race, Not Hispanic Margin of Error"
+{txt}
+{com}. 
+. keep tractid pop15a pop15aME nhwht15a nhwht15aME nhblk15a nhblk15aME geodisplaylabel
+{txt}
+{com}. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+{smcl}
+{com}{sf}{ul off}
