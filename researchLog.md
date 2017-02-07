@@ -68,6 +68,10 @@ From the master branch files from the working directory were moved to the posted
 
 ### 29 Jan 2017 - Jes
 
-Working under the `2015-ACS-5yr` branch a do-file was created. This do-file pulls the .csv files from the `missingVariables` folder and imports them into stata. This works using a loop that pulls each file individually, imports the file into stata and saves the file as a .dta file in the `stataFiles` folder. Next steps include renaming the variables intuitive variable names, labeling them, saving the files, and then merging each seperate variable file into one dataset. This dataset will then be merged into the `stlCity40Census.dta` file. 
+Working under the `2015-ACS-5yr` branch a do-file was created. This do-file pulls the .csv files from the `missingVariables` folder and imports them into stata. This works using a loop that pulls each file individually, imports the file into stata and saves the file as a .dta file in the `stataFiles` folder. Next steps include renaming the variables intuitive variable names, labeling them, saving the files, and then merging each seperate variable file into one dataset. This dataset will then be merged into the `stlCity40Census.dta` file.
+
+### 6 Feb 2017 - Jes
+
+Working under the `2015-ACS-5yr` branch a do file was created for each .dta file. These files were cleaned and the variables were renamed for consistency with the master dataset. New cleaned datasets were renamed so the variables could be easily identified. The next step involved merging the .dta files into one missing variables dataset. There was an error in this process because stata recognized that there were missing census tracts in four of the tables. These included the median home value, the median household income for blacks, the median household income for whites, and the median monthly contract for rent. Because of this error, only the full tables with all 106 census tracts were merged. I am waiting to hear from chris, (slack channel communication) to see what the best options are for moving forward with the missing census tracts.  
 
  >> > > > > > origin/master
