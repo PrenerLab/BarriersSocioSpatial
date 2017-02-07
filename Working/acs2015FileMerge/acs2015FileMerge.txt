@@ -1,0 +1,49 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acs2015
+> FileMerge/acs2015FileMerge.txt
+  log type:  text
+ opened on:   6 Feb 2017, 18:22:13
+
+. 
+. local dataPath "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/ac
+> sVariableRename2015/dtaFiles"
+
+. local fileNames "medianHouseholdIncomeBlacks.dta medianHouseholdIncomeWhites.d
+> ta medianMonthlyContractRent.dta"
+
+. foreach fileName in `fileNames' {
+  2.   local mergeFile : word `i' of `fileNames'
+  3.   use "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acs2015F
+> ileMerge/acs2015.dta"
+  4.   merge 1:1 tractid using "`dataPath'/`mergeFile'"
+  5.   assert _merge == 3
+  6.   drop _merge
+  7.   save "$projName/acs2015.dta", replace
+  8.   clear
+  9.   local i = `i' + 1
+ 10. }
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. use "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acs2015FileMe
+> rge/acs2015.dta"
+
+. do "/var/folders/2x/ppfw9r_15_z_6th1sx92yjgh0000gn/T//SD07884.000000"
+
+. 
+. // standard opening options
+. 
+. version 14
+
+. log close _all
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acs2015
+> FileMerge/acs2015FileMerge.txt
+  log type:  text
+ closed on:   6 Feb 2017, 18:27:14
+--------------------------------------------------------------------------------
