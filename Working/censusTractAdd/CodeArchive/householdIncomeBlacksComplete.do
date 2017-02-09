@@ -1,6 +1,6 @@
 // ==========================================================================
 
-// 2015 5YR ACS Variables File Merge
+// Missing Census Tracts - Median Household Income Blacks
 
 // ==========================================================================
 
@@ -27,42 +27,55 @@ cd "/Users/`c(username)'/Github Desktop/BarriersSocioSpatial/Working"
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+// check to see if source data exists
+
+global sourceData "medianHouseholdIncomeBlacks.dta"
+capture confirm file "$sourceData"
+
+if _rc==601 {
+  display in red "This do-file requires that the source dataset be saved in your working folder."
+  exit
+}
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // check to see if appropriate directories exist
 
-global projName "acs2015FileMerge"
+global projName "censusTractAdd"
 global markDown "householdIncomeBlacksComplete"
 global data "Data"
 global output "Output"
-
 capture mkdir $projName
 
 capture mkdir "$projName/$output"
 capture mkdir "$projName/CodeArchive"
 capture mkdir "$projName/$data"
 
+// copy source data to new directory
 
+global newData "householdIncomeBlacksComplete.dta"
+copy $sourceData "$projName/$data/$newData", replace
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // log process
 
-log using "$projName/$output/$projName.txt", text replace
+log using "$projName/$output/$markDown.txt", text replace
 
 // start MarkDoc log
 quietly log using "$projName/$output/$markDown-markdoc.smcl", replace smcl name(markdoc)
-
 // ==========================================================================
 
 /*
-file name - acs2015FileMerge.do
+file name - medianHomeValueComplete.do
 
-project name - 2015 ACS 5 Year Estimates Merge
+project name - Median Home Value
 
-purpose - This do-file merges all of the 2015 ACS variable datasets.
+purpose - Adds missing census tacts
 
-created - February 6, 2017
+created - Febuary 7, 2017
 
-updated - February 8, 2017
+updated - Febuary 8, 2017
 
 author - Jes Stevens
 */
@@ -70,64 +83,47 @@ author - Jes Stevens
 // ==========================================================================
 
 /*
-full description - This do file merges the 2015 5 year estimate datasets into one dataset.
-
+full description -
+This do file adds the missing census tracts to the median home value variable.
 */
 
 /*
-updates - Addition of the files that now have the complete census tracts that were previously missing from the 2015 ACS Tables.
-*/
-// ==========================================================================
-
-/*
-superordinates  -
-- employmentStatus.dta
-- medianHouseholdIncome.dta
-- occupiedHousingUnits.dta
-- perCapitaIncome.dta
-- povertyStatus.dta
-- povertyStatusBlacks.dta
-- povertyStatusWhites.dta
-- totalPopulation.dta
-- vacantHousingUnits.dta
-- householdIncomeBlacksComplete.dta
-- householdIncomeWhitesComplete.dta
-- medianHomeValueComplete.dta
-- medianRentComplete.dta
+updates -
+none
 */
 
-/*
-subordinates -
-- acs2015.dta
-*/
 
 // ==========================================================================
 // ==========================================================================
 // ==========================================================================
 
+use "$projName/$data/householdIncomeBlacksComplete.dta"
 
+set obs 106
 /***
-This loop saves the employmentStatus.dta dataset as the new master dataset named acs2015Missing.dta.
-It then merges medianHouseholdIncome.dta, occupiedHousingUnits.dta, perCapitaIncome.dta,
-povertyStatus.dta, povertyStatusBlacks.dta, povertyStatusWhites.dta, totalPopulation.dta, vacantHousingUnits.dta.
+Sets observations in the datset to 106 to match the master dataset.
 ***/
 
-local dataPath "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acsVariableRename2015/dtaFiles"
-local i = 1
-use "`dataPath'/employmentStatus.dta"
-save "$projName/acs2015.dta", replace
-local fileNames "medianHouseholdIncome.dta occupiedHousingUnits.dta perCapitaIncome.dta povertyStatus.dta povertyStatusBlacks.dta povertyStatusWhites.dta totalPopulation.dta vacantHousingUnits.dta householdIncomeBlacksComplete.dta householdIncomeWhitesComplete.dta medianHomeValueComplete.dta medianRentComplete.dta"
-foreach fileName in `fileNames' {
-  local mergeFile : word `i' of `fileNames'
-  use "$projName/acs2015.dta"
-  merge 1:1 tractid using "`dataPath'/`mergeFile'"
-  assert _merge == 3
-  drop _merge
-  save "$projName/acs2015.dta", replace
-  clear
-  local i = `i' + 1
-}
+replace tractid = 29510101300 in 99
+replace tractid = 29510102100 in 100
+replace tractid = 29510103700 in 101
+replace tractid = 29510103800 in 102
+replace tractid = 29510104200 in 103
+replace tractid = 29510114102 in 104
+replace tractid = 29510115100 in 105
+replace tractid = 29510116200 in 106
 
+replace geodisplaylabel = "Census Tract 1013" in 99
+replace geodisplaylabel = "Census Tract 1021" in 100
+replace geodisplaylabel = "Census Tract 1037" in 101
+replace geodisplaylabel = "Census Tract 1038" in 102
+replace geodisplaylabel = "Census Tract 1042" in 103
+replace geodisplaylabel = "Census Tract 1141.02" in 104
+replace geodisplaylabel = "Census Tract 1151" in 105
+replace geodisplaylabel = "Census Tract 1162" in 106
+/***
+Adds the missing census tract to the dataset.
+***/
 
 // ==========================================================================
 // ==========================================================================
@@ -139,15 +135,25 @@ quietly log close markdoc
 // convert MarkDoc log to Markdown
 markdoc "$projName/$output/$markDown-markdoc", replace export(md) install
 
+// save altered data
+save "$projName/$data/$newData", replace
+
+// ==========================================================================
+// ==========================================================================
+// ==========================================================================
+
 // copy code to code archive
 
-copy "acs2015FileMerge.do" "$projName/CodeArchive/acs2015FileMerge.do", replace
+
+copy "householdIncomeBlacksComplete.do" "$projName/CodeArchive/householdIncomeBlacksComplete.do", replace
+
 
 // ==========================================================================
 
 // standard closing options
 
 log close _all
+graph drop _all
 set more on
 
 // ==========================================================================

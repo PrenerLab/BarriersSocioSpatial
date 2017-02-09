@@ -1,0 +1,109 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/censusT
+> ractAdd/Output/medianHomeValueComplete.txt
+  log type:  text
+ opened on:   8 Feb 2017, 22:09:06
+
+. 
+. // start MarkDoc log
+. quietly log using "$projName/$output/$markDown-markdoc.smcl", replace smcl nam
+> e(markdoc)
+
+. // ==========================================================================
+. 
+. /*
+> file name - medianHomeValueComplete.do
+> 
+> project name - Median Home Value
+> 
+> purpose - Adds missing census tracts.
+> 
+> created - Febuary 7, 2017
+> 
+> updated - Febuary 7, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do file adds the missing census tracts to the median home value variable.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. use "$projName/$data/medianHomeValueComplete.dta"
+
+. 
+. set obs 106
+number of observations (_N) was 105, now 106
+
+. /***
+> Sets observations in the datset to 106 to match the master dataset.
+> ***/
+. 
+. replace tractid = 29510121100 in 106
+(1 real change made)
+
+. replace geodisplaylabel = "Census Tract 1211" in 106
+(1 real change made)
+
+. /***
+> Adds the missing census tract to the dataset.
+> ***/
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+
+. 
+. // convert MarkDoc log to Markdown
+. markdoc "$projName/$output/$markDown-markdoc", replace export(md) install
+
+(MarkDoc created censusTractAdd/Output/medianHomeValueComplete-markdoc.md)
+
+
+. 
+. // save altered data
+. save "$projName/$data/$newData", replace
+file censusTractAdd/Data/medianHomeValueComplete.dta saved
+
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // copy code to code archive
+. 
+. 
+. copy "medianHomeValueComplete.do" "$projName/CodeArchive/medianHomeValueComple
+> te.do", replace
+(note: file censusTractAdd/CodeArchive/medianHomeValueComplete.do not found)
+
+. 
+. 
+. // ==========================================================================
+. 
+. // standard closing options
+. 
+. log close _all
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/censusT
+> ractAdd/Output/medianHomeValueComplete.txt
+  log type:  text
+ closed on:   8 Feb 2017, 22:09:06
+--------------------------------------------------------------------------------

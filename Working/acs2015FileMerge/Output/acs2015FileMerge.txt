@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
       name:  <unnamed>
        log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acs2015
-> FileMerge/acs2015FileMerge.txt
+> FileMerge/Output/acs2015FileMerge.txt
   log type:  text
- opened on:   8 Feb 2017, 21:56:54
+ opened on:   8 Feb 2017, 22:29:45
 
 . 
 . // start MarkDoc log
@@ -166,43 +166,67 @@ file acs2015FileMerge/acs2015.dta saved
     matched                               106  (_merge==3)
     -----------------------------------------
 file acs2015FileMerge/acs2015.dta saved
-variable tractid does not uniquely identify observations in the using data
-r(459);
 
-end of do-file
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
 
-r(459);
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
 
-. use "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acsVariableRe
-> name2015/dtaFiles/householdIncomeBlacksComplete.dta"
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
 
-. duplicates report
-
-Duplicates in terms of all variables
-
---------------------------------------
-   copies | observations       surplus
-----------+---------------------------
-        1 |          106             0
---------------------------------------
-
-. do "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/medianRentComp
-> lete.do"
-
-. // ==========================================================================
 . 
-. // Missing Census Tracts - Median Monthly Contract Rent
 . 
 . // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
 . 
-. // standard opening options
-. 
-. version 14
+. // end MarkDoc log
+. quietly log close markdoc
 
+. 
+. // convert MarkDoc log to Markdown
+. markdoc "$projName/$output/$markDown-markdoc", replace export(md) install
+
+
+Warning
+your documentation has a width of 115, while your Stata has linesize of 80. 
+markdoc automatically adjusts your document width. You can avoid this warning by
+increasing Stata's linesize or by writing shorter lines
+
+
+(MarkDoc created acs2015FileMerge/Output/householdIncomeBlacksComplete-markdoc.md)
+
+
+. 
+. // copy code to code archive
+. 
+. copy "acs2015FileMerge.do" "$projName/CodeArchive/acs2015FileMerge.do", replac
+> e
+(note: file acs2015FileMerge/CodeArchive/acs2015FileMerge.do not found)
+
+. 
+. // ==========================================================================
+. 
+. // standard closing options
+. 
 . log close _all
       name:  <unnamed>
        log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acs2015
-> FileMerge/acs2015FileMerge.txt
+> FileMerge/Output/acs2015FileMerge.txt
   log type:  text
- closed on:   8 Feb 2017, 22:02:47
+ closed on:   8 Feb 2017, 22:29:46
 --------------------------------------------------------------------------------
