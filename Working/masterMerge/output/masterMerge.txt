@@ -1,0 +1,110 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/masterM
+> erge/output/masterMerge.txt
+  log type:  text
+ opened on:   8 Feb 2017, 22:44:26
+
+. 
+. 
+. global newData "stlCity.dta"
+
+. copy $sourceData "$projName/$newData", replace
+
+. 
+. // start MarkDoc log
+. quietly log using "$projName/$output/$projName-markdoc.smcl", ///
+>   replace smcl name(markdoc)
+
+. 
+. // OFF
+. // ==========================================================================
+. // ON
+. 
+. local dataPath "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/ac
+> s2015FileMerge"
+
+. /***
+> Sets a local macro for the dataPath for merging the files to create one master
+>  dataset. 
+> ***/
+. 
+. use "$projName/$newData"
+(St. Louis City Census Data 1970-2010 and ACS 2006-10 Sample Data - December 201
+> 6)
+
+. 
+. merge 1:1 tractid using "`dataPath'/acs2015.dta"
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+
+. /***
+> This merges the 2015 ACS data to the master dataset that was cleaned from the 
+> LTDB Brown dataset.
+> ***/
+. 
+. assert _merge == 3
+
+. /***
+> This command asserts that the using data matches the master data.
+> ***/
+. 
+. drop _merge
+
+. drop geodisplaylabel
+
+. /***
+> Drops unnecessary variables from the dataset.
+> ***/
+. 
+. save "$projName/$newData", replace
+file masterMerge/stlCity.dta saved
+
+. 
+. 
+. // OFF
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+
+. 
+. // convert MarkDoc log to Markdown
+. markdoc "$projName/$output/$projName-markdoc", ///
+>   replace export(md) install
+
+
+Warning
+your documentation has a width of 99, while your Stata has linesize of 80. 
+markdoc automatically adjusts your document width. You can avoid this warning by
+increasing Stata's linesize or by writing shorter lines
+
+
+(MarkDoc created masterMerge/output/masterMerge-markdoc.md)
+
+
+. 
+. // save altered data
+.   save "$projName/$newData", replace
+file masterMerge/stlCity.dta saved
+
+.   // copy code to code archive
+. 
+. 
+.   copy "masterMerge.do" "$projName/CodeArchive/masterMerge.do", replace
+
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // exit
+. 
+end of do-file
+
+. rename japan0a japan10a
+

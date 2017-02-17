@@ -1,0 +1,55 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. // OFF
+. // ==========================================================================
+. // ON
+. 
+. local dataPath "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acs2015FileMerge"
+{txt}
+{com}. /***
+> Sets a local macro for the dataPath for merging the files to create one master dataset. 
+> ***/
+. 
+. use "$projName/$newData"
+{txt}(St. Louis City Census Data 1970-2010 and ACS 2006-10 Sample Data - December 2016)
+
+{com}. 
+. merge 1:1 tractid using "`dataPath'/acs2015.dta"
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+
+{com}. /***
+> This merges the 2015 ACS data to the master dataset that was cleaned from the LTDB Brown dataset.
+> ***/
+. 
+. assert _merge == 3
+{txt}
+{com}. /***
+> This command asserts that the using data matches the master data.
+> ***/
+. 
+. drop _merge
+{txt}
+{com}. drop geodisplaylabel
+{txt}
+{com}. /***
+> Drops unnecessary variables from the dataset.
+> ***/
+. 
+. save "$projName/$newData", replace
+{txt}file masterMerge/stlCity.dta saved
+
+{com}. 
+. 
+. // OFF
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+{smcl}
+{com}{sf}{ul off}

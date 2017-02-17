@@ -1,0 +1,95 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. // ==========================================================================
+. 
+. /*
+> file name - B19013.do
+> 
+> project name - Median Household Income
+> 
+> purpose - Labels variables from the 2015 ACS
+> 
+> created - Febuary 7, 2017
+> 
+> updated - Febuary 7, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do file renames the 2015 acs Variables.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - ACS_15_5YR_B19013.dta
+> */
+. 
+. /*
+> subordinates -
+> 
+> */
+. 
+. // ==========================================================================
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. use "$projName/medianHouseholdIncome.dta"
+{txt}
+{com}. drop geoid
+{txt}
+{com}. /***
+> Drops variable from set for later merge.
+> ***/
+. 
+. rename geoid2 tractid
+{res}{txt}
+{com}. label variable tractid "TRTID10"
+{txt}
+{com}. /***
+> Renames and labels variable to match variable name for later merge
+> ***/
+. 
+. rename hd01_vd01 hinc15a
+{res}{txt}
+{com}. rename hd02_vd01 hinc15aME
+{res}{txt}
+{com}. /***
+> Renames variables to match variables from previous census datasets for later merge.
+> ***/
+. 
+. label variable hinc15a "Median Household Income"
+{txt}
+{com}. label variable hinc15aME "Median Household Income Margin of Error"
+{txt}
+{com}. /***
+> Labels variable from set to match.
+> ***/
+. 
+. 
+. 
+. keep tractid geodisplaylabel hinc15a hinc15aME
+{txt}
+{com}. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+{smcl}
+{com}{sf}{ul off}

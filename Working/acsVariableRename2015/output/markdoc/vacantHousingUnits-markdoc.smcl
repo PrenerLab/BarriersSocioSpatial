@@ -1,0 +1,104 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. // ==========================================================================
+. 
+. /*
+> file name - B25002.do
+> 
+> project name - Vacant Housing Units
+> 
+> purpose - Labels variables from the 2015 ACS
+> 
+> created - Febuary 7, 2017
+> 
+> updated - Febuary 7, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do file renames the 2015 acs Variables.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - ACS_15_5YR_B25002.dta
+> */
+. 
+. /*
+> subordinates -
+> 
+> */
+. 
+. // ==========================================================================
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. use "$projName/vacantHousingUnits.dta"
+{txt}
+{com}. drop geoid
+{txt}
+{com}. /***
+> Drops variable from set for later merge.
+> ***/
+. 
+. rename geoid2 tractid
+{res}{txt}
+{com}. label variable tractid "TRTID10"
+{txt}
+{com}. /***
+> Renames and labels variable to match variable name for later merge
+> ***/
+. 
+. rename hd01_vd01 hu15a
+{res}{txt}
+{com}. rename hd02_vd01 hu15aME
+{res}{txt}
+{com}. rename hd01_vd03 vac15a
+{res}{txt}
+{com}. rename hd02_vd03 vac15aME
+{res}{txt}
+{com}. /***
+> Renames variables to match variables from previous census datasets for later merge.
+> ***/
+. 
+. label variable hu15a "Housing Units"
+{txt}
+{com}. label variable hu15aME "Housing Units Margin of Error"
+{txt}
+{com}. label variable vac15a "Vacant Housing Units"
+{txt}
+{com}. label variable vac15aME "Vacant Housing Units Margin of Error"
+{txt}
+{com}. /***
+> Labels variable from set to match.
+> ***/
+. 
+. 
+. 
+. 
+. keep tractid geodisplaylabel hu15a hu15aME vac15a vac15aME
+{txt}
+{com}. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+{smcl}
+{com}{sf}{ul off}

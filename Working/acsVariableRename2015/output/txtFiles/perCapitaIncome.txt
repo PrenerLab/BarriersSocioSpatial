@@ -1,0 +1,146 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acsVari
+> ableRename2015/perCapitaIncome.txt
+  log type:  text
+ opened on:   6 Feb 2017, 15:55:21
+
+. 
+. // start MarkDoc log
+. quietly log using "$projName/$markDown-markdoc.smcl", replace smcl name(markdo
+> c)
+
+. 
+. // ==========================================================================
+. 
+. /*
+> file name - B19301.do
+> 
+> project name - Per Capita Income
+> 
+> purpose - Labels variables from the 2015 ACS
+> 
+> created - Febuary 7, 2017
+> 
+> updated - Febuary 7, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do file renames the 2015 acs Variables.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - ACS_15_5YR_B19301.dta
+> */
+. 
+. /*
+> subordinates -
+> 
+> */
+. 
+. // ==========================================================================
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. use "$projName/perCapitaIncome.dta"
+
+. drop geoid
+
+. /***
+> Drops variable from set for later merge.
+> ***/
+. 
+. rename geoid2 tractid
+
+. label variable tractid "TRTID10"
+
+. /***
+> Renames and labels variable to match variable name for later merge
+> ***/
+. 
+. rename hd01_vd01 incpc15a
+
+. rename hd02_vd01 incpc15aME
+
+. /***
+> Renames variables to match variables from previous census datasets for later m
+> erge.
+> ***/
+. 
+. label variable incpc15a "Per Capita Income"
+
+. label variable incpc15aME "Per Capita Income Margin of Error"
+
+. /***
+> Labels variable from set to match.
+> ***/
+. 
+. 
+. 
+. keep tractid geodisplaylabel incpc15a incpc15aME
+
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+
+. // convert MarkDoc log to Markdown
+. markdoc "$projName/$markDown-markdoc", replace export(md) install
+
+
+Warning
+your documentation has a width of 85, while your Stata has linesize of 80. 
+markdoc automatically adjusts your document width. You can avoid this warning by
+increasing Stata's linesize or by writing shorter lines
+
+
+(MarkDoc created acsVariableRename2015/perCapitaIncome-markdoc.md)
+
+
+. 
+. // save altered data
+. save "$projName/$newData", replace
+file acsVariableRename2015/perCapitaIncome.dta saved
+
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // copy code to code archive
+. 
+. 
+. copy "B19301.do" "$projName/CodeArchive/B19301.do", replace
+
+. 
+. 
+. // ==========================================================================
+. 
+. // standard closing options
+. 
+. log close _all
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acsVari
+> ableRename2015/perCapitaIncome.txt
+  log type:  text
+ closed on:   6 Feb 2017, 15:55:21
+--------------------------------------------------------------------------------

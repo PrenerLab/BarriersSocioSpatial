@@ -1,0 +1,169 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/missing
+> Variables/csvFiles/stataFiles/stataFiles.txt
+  log type:  text
+ opened on:   6 Feb 2017, 15:51:38
+
+. 
+. // ==========================================================================
+. 
+. /*
+> file name - convert.do
+> 
+> project name - Barriers Socio-Spatial
+> 
+> purpose - This do-file converts the .csv missing ACS data files to .dta files.
+> 
+> created - January 28, 2017
+> 
+> updated - January 28, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do-file converts the missing variable .csv files to stata .dta files.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - ACS_15_5YR_B03002.csv
+> - ACS_15_5YR_B17001.csv
+> - ACS_15_5YR_B17020B.csv
+> - ACS_15_5YR_B17020H.csv
+> - ACS_15_5YR_B19013.csv
+> - ACS_15_5YR_B19013B.csv
+> - ACS_15_5YR_B19013H.csv
+> - ACS_15_5YR_B19301.csv
+> - ACS_15_5YR_B23001.csv
+> - ACS_15_5YR_B25002.csv
+> - ACS_15_5YR_B25025.csv
+> - ACS_15_5YR_B25003.csv
+> - ACS_15_5YR_B25058.csv
+> - ACS_15_5YR_B25077.csv
+> */
+. 
+. /*
+> subordinates -
+> - ACS_15_5YR_B03002.csv
+> - ACS_15_5YR_B17001.csv
+> - ACS_15_5YR_B17020B.csv
+> - ACS_15_5YR_B17020H.csv
+> - ACS_15_5YR_B19013.csv
+> - ACS_15_5YR_B19013B.csv
+> - ACS_15_5YR_B19013H.csv
+> - ACS_15_5YR_B19301.csv
+> - ACS_15_5YR_B23001.csv
+> - ACS_15_5YR_B25002.csv
+> - ACS_15_5YR_B25025.csv
+> - ACS_15_5YR_B25003.csv
+> - ACS_15_5YR_B25058.csv
+> - ACS_15_5YR_B25077.csv
+> */
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. 
+. local dataPath "/Users/`c(username)'/Github Desktop/BarriersSocioSpatial/Worki
+> ng/missingVariables/csvFiles"
+
+. local files "ACS_15_5YR_B03002.csv ACS_15_5YR_B17001.csv ACS_15_5YR_B17020B.cs
+> v ACS_15_5YR_B17020H.csv ACS_15_5YR_B19013.csv ACS_15_5YR_B19013B.csv ACS_15_5
+> YR_B19013H.csv ACS_15_5YR_B19301.csv ACS_15_5YR_B23001.csv ACS_15_5YR_B23025.c
+> sv ACS_15_5YR_B25002.csv ACS_15_5YR_B25003.csv ACS_15_5YR_B25058.csv ACS_15_5Y
+> R_B25077.csv"
+
+. local newNames "ACS_15_5YR_B03002.dta ACS_15_5YR_B17001.dta ACS_15_5YR_B17020B
+> .dta ACS_15_5YR_B17020H.dta ACS_15_5YR_B19013.dta ACS_15_5YR_B19013B.dta ACS_1
+> 5_5YR_B19013H.dta ACS_15_5YR_B19301.dta ACS_15_5YR_B23001.dta ACS_15_5YR_B2302
+> 5.dta ACS_15_5YR_B25002.dta ACS_15_5YR_B25003.dta ACS_15_5YR_B25058.dta ACS_15
+> _5YR_B25077.dta"
+
+. local i=1
+
+. foreach dataFile in `files' {
+  2.   local newData: word `i' of `newNames'
+  3.   import delimited "`dataPath'/`dataFile'", varnames(1)
+  4.   save "$projName/`newData'", replace
+  5.   clear
+  6.   local i=`i'+1
+  7. }
+(45 vars, 106 obs)
+file stataFiles/ACS_15_5YR_B03002.dta saved
+(121 vars, 106 obs)
+file stataFiles/ACS_15_5YR_B17001.dta saved
+(37 vars, 106 obs)
+file stataFiles/ACS_15_5YR_B17020B.dta saved
+(37 vars, 106 obs)
+file stataFiles/ACS_15_5YR_B17020H.dta saved
+(5 vars, 106 obs)
+file stataFiles/ACS_15_5YR_B19013.dta saved
+(5 vars, 98 obs)
+file stataFiles/ACS_15_5YR_B19013B.dta saved
+(5 vars, 100 obs)
+file stataFiles/ACS_15_5YR_B19013H.dta saved
+(5 vars, 106 obs)
+file stataFiles/ACS_15_5YR_B19301.dta saved
+(349 vars, 106 obs)
+file stataFiles/ACS_15_5YR_B23001.dta saved
+(17 vars, 106 obs)
+(note: file stataFiles/ACS_15_5YR_B23025.dta not found)
+file stataFiles/ACS_15_5YR_B23025.dta saved
+(9 vars, 106 obs)
+file stataFiles/ACS_15_5YR_B25002.dta saved
+(9 vars, 106 obs)
+file stataFiles/ACS_15_5YR_B25003.dta saved
+(5 vars, 105 obs)
+file stataFiles/ACS_15_5YR_B25058.dta saved
+(5 vars, 105 obs)
+file stataFiles/ACS_15_5YR_B25077.dta saved
+
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // copy code to code archive
+. 
+. copy "convertMissing.do" "$projName/CodeArchive/convertMissing.do", replace
+file convertMissing.do not found
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/B03002.do"
+
+. // ==========================================================================
+. 
+. // Total Population
+. 
+. // ==========================================================================
+. 
+. // standard opening options
+. 
+. version 14
+
+. log close _all
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/missing
+> Variables/csvFiles/stataFiles/stataFiles.txt
+  log type:  text
+ closed on:   6 Feb 2017, 15:54:03
+--------------------------------------------------------------------------------

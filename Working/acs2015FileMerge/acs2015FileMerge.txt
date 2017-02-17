@@ -1,0 +1,208 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acs2015
+> FileMerge/acs2015FileMerge.txt
+  log type:  text
+ opened on:   8 Feb 2017, 21:56:54
+
+. 
+. // start MarkDoc log
+. quietly log using "$projName/$output/$markDown-markdoc.smcl", replace smcl nam
+> e(markdoc)
+
+. 
+. // ==========================================================================
+. 
+. /*
+> file name - acs2015FileMerge.do
+> 
+> project name - 2015 ACS 5 Year Estimates Merge
+> 
+> purpose - This do-file merges all of the 2015 ACS variable datasets.
+> 
+> created - February 6, 2017
+> 
+> updated - February 8, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description - This do file merges the 2015 5 year estimate datasets into 
+> one dataset.
+> 
+> */
+. 
+. /*
+> updates - Addition of the files that now have the complete census tracts that 
+> were previously missing from the 2015 ACS Tables.
+> */
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - employmentStatus.dta
+> - medianHouseholdIncome.dta
+> - occupiedHousingUnits.dta
+> - perCapitaIncome.dta
+> - povertyStatus.dta
+> - povertyStatusBlacks.dta
+> - povertyStatusWhites.dta
+> - totalPopulation.dta
+> - vacantHousingUnits.dta
+> - householdIncomeBlacksComplete.dta
+> - householdIncomeWhitesComplete.dta
+> - medianHomeValueComplete.dta
+> - medianRentComplete.dta
+> */
+. 
+. /*
+> subordinates -
+> - acs2015.dta
+> */
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. 
+. /***
+> This loop saves the employmentStatus.dta dataset as the new master dataset nam
+> ed acs2015Missing.dta.
+> It then merges medianHouseholdIncome.dta, occupiedHousingUnits.dta, perCapitaI
+> ncome.dta,
+> povertyStatus.dta, povertyStatusBlacks.dta, povertyStatusWhites.dta, totalPopu
+> lation.dta, vacantHousingUnits.dta.
+> ***/
+. 
+. local dataPath "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/ac
+> sVariableRename2015/dtaFiles"
+
+. local i = 1
+
+. use "`dataPath'/employmentStatus.dta"
+
+. save "$projName/acs2015.dta", replace
+file acs2015FileMerge/acs2015.dta saved
+
+. local fileNames "medianHouseholdIncome.dta occupiedHousingUnits.dta perCapitaI
+> ncome.dta povertyStatus.dta povertyStatusBlacks.dta povertyStatusWhites.dta to
+> talPopulation.dta vacantHousingUnits.dta householdIncomeBlacksComplete.dta hou
+> seholdIncomeWhitesComplete.dta medianHomeValueComplete.dta medianRentComplete.
+> dta"
+
+. foreach fileName in `fileNames' {
+  2.   local mergeFile : word `i' of `fileNames'
+  3.   use "$projName/acs2015.dta"
+  4.   merge 1:1 tractid using "`dataPath'/`mergeFile'"
+  5.   assert _merge == 3
+  6.   drop _merge
+  7.   save "$projName/acs2015.dta", replace
+  8.   clear
+  9.   local i = `i' + 1
+ 10. }
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                               106  (_merge==3)
+    -----------------------------------------
+file acs2015FileMerge/acs2015.dta saved
+variable tractid does not uniquely identify observations in the using data
+r(459);
+
+end of do-file
+
+r(459);
+
+. use "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acsVariableRe
+> name2015/dtaFiles/householdIncomeBlacksComplete.dta"
+
+. duplicates report
+
+Duplicates in terms of all variables
+
+--------------------------------------
+   copies | observations       surplus
+----------+---------------------------
+        1 |          106             0
+--------------------------------------
+
+. do "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/medianRentComp
+> lete.do"
+
+. // ==========================================================================
+. 
+. // Missing Census Tracts - Median Monthly Contract Rent
+. 
+. // ==========================================================================
+. 
+. // standard opening options
+. 
+. version 14
+
+. log close _all
+      name:  <unnamed>
+       log:  /Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acs2015
+> FileMerge/acs2015FileMerge.txt
+  log type:  text
+ closed on:   8 Feb 2017, 22:02:47
+--------------------------------------------------------------------------------

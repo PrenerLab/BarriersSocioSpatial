@@ -1,0 +1,66 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. // ==========================================================================
+. 
+. /*
+> file name - medianHomeValueComplete.do
+> 
+> project name - Median Home Value
+> 
+> purpose - Adds missing census tracts.
+> 
+> created - Febuary 7, 2017
+> 
+> updated - Febuary 7, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do file adds the missing census tracts to the median home value variable.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. use "$projName/$data/medianHomeValueComplete.dta"
+{txt}
+{com}. 
+. set obs 106
+{txt}{p}
+number of observations (_N)  was 105,
+now 106
+{p_end}
+
+{com}. /***
+> Sets observations in the datset to 106 to match the master dataset.
+> ***/
+. 
+. replace tractid = 29510121100 in 106
+{txt}(1 real change made)
+
+{com}. replace geodisplaylabel = "Census Tract 1211" in 106
+{txt}(1 real change made)
+
+{com}. /***
+> Adds the missing census tract to the dataset.
+> ***/
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+{smcl}
+{com}{sf}{ul off}

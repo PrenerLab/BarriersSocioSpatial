@@ -1,0 +1,180 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. // ==========================================================================
+. 
+. /*
+> file name - acs2015FileMerge.do
+> 
+> project name - 2015 ACS 5 Year Estimates Merge
+> 
+> purpose - This do-file merges all of the 2015 ACS variable datasets.
+> 
+> created - February 6, 2017
+> 
+> updated - February 8, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description - This do file merges the 2015 5 year estimate datasets into one dataset.
+> 
+> */
+. 
+. /*
+> updates - Addition of the files that now have the complete census tracts that were previously missing from the 2015 ACS Tables.
+> */
+. // ==========================================================================
+. 
+. /*
+> superordinates  -
+> - employmentStatus.dta
+> - medianHouseholdIncome.dta
+> - occupiedHousingUnits.dta
+> - perCapitaIncome.dta
+> - povertyStatus.dta
+> - povertyStatusBlacks.dta
+> - povertyStatusWhites.dta
+> - totalPopulation.dta
+> - vacantHousingUnits.dta
+> - householdIncomeBlacksComplete.dta
+> - householdIncomeWhitesComplete.dta
+> - medianHomeValueComplete.dta
+> - medianRentComplete.dta
+> */
+. 
+. /*
+> subordinates -
+> - acs2015.dta
+> */
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. 
+. /***
+> This loop saves the employmentStatus.dta dataset as the new master dataset named acs2015Missing.dta.
+> It then merges medianHouseholdIncome.dta, occupiedHousingUnits.dta, perCapitaIncome.dta,
+> povertyStatus.dta, povertyStatusBlacks.dta, povertyStatusWhites.dta, totalPopulation.dta, vacantHousingUnits.dta.
+> ***/
+. 
+. local dataPath "/Users/NStevens/Github Desktop/BarriersSocioSpatial/Working/acsVariableRename2015/dtaFiles"
+{txt}
+{com}. local i = 1
+{txt}
+{com}. use "`dataPath'/employmentStatus.dta"
+{txt}
+{com}. save "$projName/acs2015.dta", replace
+{txt}file acs2015FileMerge/acs2015.dta saved
+
+{com}. local fileNames "medianHouseholdIncome.dta occupiedHousingUnits.dta perCapitaIncome.dta povertyStatus.dta povertyStatusBlacks.dta povertyStatusWhites.dta totalPopulation.dta vacantHousingUnits.dta householdIncomeBlacksComplete.dta householdIncomeWhitesComplete.dta medianHomeValueComplete.dta medianRentComplete.dta"
+{txt}
+{com}. foreach fileName in `fileNames' {c -(}
+{txt}  2{com}.   local mergeFile : word `i' of `fileNames'
+{txt}  3{com}.   use "$projName/acs2015.dta"
+{txt}  4{com}.   merge 1:1 tractid using "`dataPath'/`mergeFile'"
+{txt}  5{com}.   assert _merge == 3
+{txt}  6{com}.   drop _merge
+{txt}  7{com}.   save "$projName/acs2015.dta", replace
+{txt}  8{com}.   clear
+{txt}  9{com}.   local i = `i' + 1
+{txt} 10{com}. {c )-}
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+{res}
+{txt}{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}             106{txt}  (_merge==3)
+{col 5}{hline 41}
+file acs2015FileMerge/acs2015.dta saved
+
+{com}. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+{smcl}
+{com}{sf}{ul off}

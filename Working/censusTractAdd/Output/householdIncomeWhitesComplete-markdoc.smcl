@@ -1,0 +1,97 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. // ==========================================================================
+. 
+. /*
+> file name - householdIncomeWhitesComplete.do
+> 
+> project name - Household Income Whites
+> 
+> purpose - Adds missing census tracts
+> 
+> created - Febuary 7, 2017
+> 
+> updated - Febuary 8, 2017
+> 
+> author - Jes Stevens
+> */
+. 
+. // ==========================================================================
+. 
+. /*
+> full description -
+> This do file adds the missing census tracts to the household income for whites variable.
+> */
+. 
+. /*
+> updates -
+> none
+> */
+. 
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. use "$projName/$data/householdIncomeWhitesComplete.dta"
+{txt}
+{com}. 
+. set obs 106
+{txt}{p}
+number of observations (_N)  was 100,
+now 106
+{p_end}
+
+{com}. /***
+> Sets observations in the datset to 106 to match the master dataset.
+> ***/
+. 
+. replace tractid = 29510107300 in 101
+{txt}(1 real change made)
+
+{com}. replace tractid = 29510108200 in 102
+{txt}(1 real change made)
+
+{com}. replace tractid = 29510108300 in 103
+{txt}(1 real change made)
+
+{com}. replace tractid = 29510112200 in 104
+{txt}(1 real change made)
+
+{com}. replace tractid = 29510118100 in 105
+{txt}(1 real change made)
+
+{com}. replace tractid = 29510120200 in 106
+{txt}(1 real change made)
+
+{com}. 
+. replace geodisplaylabel = "Census Tract 1073" in 101
+{txt}(1 real change made)
+
+{com}. replace geodisplaylabel = "Census Tract 1082" in 102
+{txt}(1 real change made)
+
+{com}. replace geodisplaylabel = "Census Tract 1083" in 103
+{txt}(1 real change made)
+
+{com}. replace geodisplaylabel = "Census Tract 1122" in 104
+{txt}(1 real change made)
+
+{com}. replace geodisplaylabel = "Census Tract 1181" in 105
+{txt}(1 real change made)
+
+{com}. replace geodisplaylabel = "Census Tract 1202" in 106
+{txt}(1 real change made)
+
+{com}. /***
+> Adds the missing census tract to the dataset.
+> ***/
+. 
+. // ==========================================================================
+. // ==========================================================================
+. // ==========================================================================
+. 
+. // end MarkDoc log
+. quietly log close markdoc
+{smcl}
+{com}{sf}{ul off}
