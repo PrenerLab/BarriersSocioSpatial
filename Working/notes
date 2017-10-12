@@ -1,0 +1,50 @@
+## Notes on Brown Data
+
+### Folders
+-  [x] 01-fileConversion
+-  [x] acs2015FileMerge
+-  [x] acsVariableRename2015
+-  [x] censusTractAdd
+-  [x] fileMerge
+  -  [x] preMergeFileCleaning
+  -  [x] fileMergePostCleaning
+-  [x] masterMerge
+-  [x] missingVariables
+-  [x] variableNames
+-  [x] 2010acsRename
+
+
+
+`01-fileConversion`
+convert.do - This do file converts the Brown LTDB from csv files to dta files, and saves them under new names so they can be merged into one dta file.
+[2010 data is from 2008 - 2012 5 year estimates, using 2010 as a midpoint](https://s4.ad.brown.edu/Projects/Diversity/Researcher/LTBDDload/DataList.aspx)
+
+`preMergeFileCleaning`
+clean.do - Takes the orginal dataset and drops all counties not equal to St. Louis City.
+
+`fileMergePostCleaning`
+merge.do - The first loop adds a year variable to each dataset for the assert command in the merge loop. The merge loop, merges the fullcount dataset with the sample dataset from each appropriate year. The third loop then saves the 1970 dataset as the master file, and merges each dataset into the 1970 file to create a master dataset.
+
+`missing variables`
+convertMissing.do - Variables identified by Chris and myself were downloaded from american fact finder. These tables were downloaded in csv format. They were then converted to dta files.
+
+`acsVariableRename2015`
+A do file was created for each dta file of the missing 2015 variables. This do file pulled in the dta file, renamed the file and then renamed the variables in each file, it then saved the dta file as the variable name so it was easily identifiable.
+
+`acs2015FileMerge`
+acs2015FileMerge.do - This do file takes the cleaned renamed .dta files and merges them into one dta file named `acs2015.dta`. When this merge first happened there were missing census tracts from the data, which caused an error in the merge.
+
+`censusTractAdd`
+A do file was created for each 2015 ACS table dta file, and it added missing data for those census tracts. The then acs2015FileMerge.do was ran again to merge the 2015 tables into one acs2015.dta
+
+`variableNames`
+master.do - opens the master dataset created in the `fileMergePostCleaning` step, and calls the data.do file. And after the data.do file ends the dataset is then saved as stlCity40Census.dta.
+data.do - In its current form the combined datasets do not have variable labels. This do
+file adds variable labels to each iteration of the variable. By using loops, the following code addes a variable label to each variable in
+the variable list.
+
+`masterMerge`
+masterMerge.do -  then using the merge command, merges the acs2015.dta file to the master dataset that is in the working directory, and saves it as the stlCity.dta file.
+
+`2010acsRename`
+master.do - This file renames the variables from the 2010 acs, and 2010 brown in the master dataset to match the style of the other variables.
